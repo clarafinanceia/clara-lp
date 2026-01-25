@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-hubot: 'Hubot Sans', 'Inter', system-ui, sans-serif;
+
+  --color-primary: #1b329a;
+  --color-primary-light: #476fb5;
+  --color-primary-lighter: #728fbf;
+  --color-success: #18c47f;
+  --color-gray-light: #8c8787;
+  --color-gray-lighter: #c0c0c0;
+  --color-dark: #383838;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

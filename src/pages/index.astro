@@ -1,17 +1,579 @@
 ---
+// Assets do Figma
+const assets = {
+  heroImage: "https://www.figma.com/api/mcp/asset/756f27b8-6869-4d64-9d11-2df66ce74ebf",
+  logo: "https://www.figma.com/api/mcp/asset/082c0af1-927f-4516-8a88-6aac57e4fb52",
+  logoWhite: "https://www.figma.com/api/mcp/asset/ff69b0e3-c65e-494a-93ad-77a5b6cad003",
+  glassLayer1: "https://www.figma.com/api/mcp/asset/0bfa9fcd-61f4-40f7-93fb-c28934d4002c",
+  glassLayer2: "https://www.figma.com/api/mcp/asset/9fff9624-ec7b-4e03-90cb-02bc35a671c4",
+  dots: "https://www.figma.com/api/mcp/asset/6e13f010-4f17-4bf3-a4f2-5f6f61b32835",
+  iconGastoReal: "https://www.figma.com/api/mcp/asset/0ab38a25-3e8e-499e-9070-464bf5cb6bdf",
+  iconInsights: "https://www.figma.com/api/mcp/asset/5f9ee730-3ed5-4b76-871f-f11f13f949ae",
+  iconEconomia: "https://www.figma.com/api/mcp/asset/2138767d-ff25-4e82-b4c8-7659e36ecd3d",
+  cardAnalise: "https://www.figma.com/api/mcp/asset/68fc77ea-9350-4d5b-9510-1816c8fb9cb3",
+  iconReducao: "https://www.figma.com/api/mcp/asset/06951866-3275-45ad-ad52-82cd0b2688f0",
+  iconCaptura: "https://www.figma.com/api/mcp/asset/6db7c49b-0ec4-44c9-b711-ab4cd2aa95c8",
+  iconAlertas: "https://www.figma.com/api/mcp/asset/68a46a80-8ce9-4bc8-b480-b05587c1d87f",
+  iconMetas: "https://www.figma.com/api/mcp/asset/aed2d8bb-f6bf-4905-be07-9afadc0585d9",
+  step1: "https://www.figma.com/api/mcp/asset/db9f2987-7919-47b8-90ca-aace38650990",
+  step2: "https://www.figma.com/api/mcp/asset/01b74420-cb5d-451a-8071-528d41cc8515",
+  step3: "https://www.figma.com/api/mcp/asset/a6267737-d731-4ad4-89e0-6d3024e79a06",
+  step4: "https://www.figma.com/api/mcp/asset/93d08082-9faf-4892-8dbe-ade5c41664ab",
+  // Hero card icons
+  iconLightning1: "https://www.figma.com/api/mcp/asset/6649b8ce-7fef-44b3-9ce1-0e5c35e6cf03",
+  iconLightning2: "https://www.figma.com/api/mcp/asset/2c25c45f-db0f-4b1c-91e5-9f1061b8393c",
+  iconShare1: "https://www.figma.com/api/mcp/asset/e78b3c4d-81e7-43bc-a335-a3d7c6854532",
+  iconShare2: "https://www.figma.com/api/mcp/asset/20a7e421-4716-4c57-85c8-ecaf3aca001c",
+  iconShare3: "https://www.figma.com/api/mcp/asset/c0fdefbe-0a89-4ae0-b43d-ea552acfa9d3",
+  iconPalette1: "https://www.figma.com/api/mcp/asset/b2e0e8e3-1609-4606-a83a-a5f6e3e0f8ab",
+  iconPalette2: "https://www.figma.com/api/mcp/asset/3ed48625-c062-46ef-ab75-372872dc26ea",
+  iconPalette3: "https://www.figma.com/api/mcp/asset/b7772925-bbf5-46e7-89da-81f53c8f2d2d",
+  // Benefit card icons
+  iconWallet1: "https://www.figma.com/api/mcp/asset/6224dc74-643d-46f2-91d0-f271c328a64d",
+  iconWallet2: "https://www.figma.com/api/mcp/asset/0b97c399-9ece-4737-8422-24485ae350be",
+  iconWallet3: "https://www.figma.com/api/mcp/asset/09aa42bb-90b4-4b87-b285-5f89f83b7901",
+  iconBell1: "https://www.figma.com/api/mcp/asset/0f307e82-b71b-41a5-a827-706dc28e1088",
+  iconBell2: "https://www.figma.com/api/mcp/asset/cda6d7ee-4489-42bf-bee7-379a4bcea4b4",
+  iconRocket1: "https://www.figma.com/api/mcp/asset/2f6b71d3-7ba2-47bb-89b5-38ef1bb05143",
+  iconRocket2: "https://www.figma.com/api/mcp/asset/9e7d8601-5a17-4d94-84b8-c3fc53cdb72e",
+  iconRocket3: "https://www.figma.com/api/mcp/asset/dad3dd76-73f6-4ccd-84bc-d2ec000b18e1",
+  // Benefits card Lightning icon (colored version)
+  iconLightningBenefits1: "https://www.figma.com/api/mcp/asset/b58a1505-a638-4842-a71d-0e74e918d986",
+  iconLightningBenefits2: "https://www.figma.com/api/mcp/asset/d2a701b3-b35c-45d8-8e61-b47e04f97e5b",
+};
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="description" content="Clara - Sua IA de finanças pessoais. Não deixe seu dinheiro falando sozinho." />
+    <title>Clara - Sua IA de Finanças Pessoais</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/src/styles/global.css" />
+
+    <!-- SVG Filter for Liquid Glass distortion effect - exaggerated at edges -->
+    <svg class="hidden" width="0" height="0">
+      <defs>
+        <filter id="liquid-glass-distortion" x="-50%" y="-50%" width="200%" height="200%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" result="noise" seed="3" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="35" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </defs>
+    </svg>
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- Hero Section -->
+    <section class="relative min-h-screen overflow-hidden">
+      <!-- Video Background -->
+      <div class="absolute inset-0 w-full h-full">
+          <video
+          autoplay
+          loop
+          muted
+          playsinline
+          class="w-full h-full object-cover"
+        >
+          <source src="/images/header_animado.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <!-- Header -->
+      <header class="relative z-50 flex items-center justify-between px-4 lg:px-12 py-6">
+        <div class="flex items-center shrink-0">
+          <img src={assets.logo} alt="Clara" width="134" height="45" />
+        </div>
+        <!-- Liquid Glass Navigation Pill -->
+        <nav class="hidden md:flex items-center relative rounded-full overflow-hidden shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] transition-all duration-300 hover:shadow-[0_8px_40px_0_rgba(31,38,135,0.5)]" style="border: 1px solid rgba(255,255,255,0.1);">
+          <!-- Center blur layer (no distortion) -->
+          <div class="absolute inset-0 rounded-full" style="background: rgba(0, 0, 0, 0.00); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);"></div>
+          <!-- Edge-only distortion layer -->
+          <div class="absolute inset-0 rounded-full pointer-events-none" style="background: transparent; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); filter: url(#liquid-glass-distortion); mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%); -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%);"></div>
+
+          <div class="relative z-10 flex items-center gap-4 px-6 py-3">
+            <a href="#como-funciona" class="text-white/50 hover:text-white/70 transition-colors text-[18px]" style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 300;">
+              Como funciona
+            </a>
+
+            <span class="text-white/30 text-lg">|</span>
+
+            <a href="#" class="flex items-center gap-2 text-[18px] hover:opacity-80 transition-opacity" style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700;">
+              <span class="bg-gradient-to-l from-white to-[#728fbf] bg-clip-text" style="-webkit-text-fill-color: transparent;">Entrar</span>
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" fill="url(#userGradient)" />
+                <path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="url(#userGradient)" stroke-width="2" stroke-linecap="round" />
+                <defs>
+                  <linearGradient id="userGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#728fbf" />
+                    <stop offset="100%" stop-color="white" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </a>
+          </div>
+        </nav>
+        <button class="md:hidden text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </header>
+
+      <!-- Hero Content -->
+      <div class="relative z-10 flex flex-col items-center justify-center text-center px-6 pt-16 lg:pt-24 pb-32">
+        <h1 class="text-4xl lg:text-[68.06px] text-white leading-[1.1] mb-32" style="font-family: 'Hubot Sans', 'Inter', sans-serif; font-weight: 300;">
+          Não deixe <span style="font-weight: 700;">seu dinheiro</span><br />
+          falando sozinho
+        </h1>
+
+        <div class="mb-6">
+          <h2 class="text-2xl lg:text-[35.372px] text-white leading-[1.1]" style="font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-weight: 700;">Captura de economias</h2>
+        </div>
+        <p class="text-white text-lg lg:text-[24.488px] mb-8 max-w-xl leading-[1.1]" style="font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-weight: 200;">
+          Identificamos automaticamente onde você pode economizar
+        </p>
+
+        <a href="#" class="bg-white text-[#1b329a] px-10 py-4 rounded-full text-[24.891px] hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1" style="font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-weight: 400;">
+          Começar agora →
+        </a>
+
+        <!-- Dots indicator -->
+        <div class="flex gap-2 mt-8">
+          <span class="w-3 h-3 bg-white rounded-full"></span>
+          <span class="w-3 h-3 bg-white/40 rounded-full"></span>
+          <span class="w-3 h-3 bg-white/40 rounded-full"></span>
+        </div>
+
+        <!-- Subtitle -->
+        <p class="text-white text-xl lg:text-[24.488px] mt-16 mb-8" style="font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-weight: 700;">
+          Confira as vantagens de ter a Clara com você:
+        </p>
+
+        <!-- Feature Cards - Liquid Glass style -->
+        <div class="flex flex-col md:flex-row gap-6 lg:gap-8 mt-4 px-4">
+          <!-- Card 1: Tempo real -->
+          <div class="group relative w-full md:w-[320px] lg:w-[392px] h-[180px] lg:h-[206px] rounded-[34.632px] overflow-hidden shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] transition-all duration-300 hover:shadow-[0_8px_40px_0_rgba(31,38,135,0.5)] hover:scale-[1.02]" style="border: 1px solid rgba(255,255,255,0.1);">
+            <!-- Center blur layer (no distortion) -->
+            <div class="absolute inset-0 rounded-[34.632px]" style="background: rgba(0, 0, 0, 0.00); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);"></div>
+            <!-- Edge-only distortion layer -->
+            <div class="absolute inset-0 rounded-[34.632px] pointer-events-none" style="background: transparent; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); filter: url(#liquid-glass-distortion); mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%); -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%);"></div>
+            <div class="relative flex flex-col items-center justify-center h-full text-center px-6 z-10">
+              <!-- Lightning Icon -->
+              <div class="relative w-10 h-10 mb-4">
+                <img src={assets.iconLightning1} alt="" class="absolute w-[10px] h-[13px] left-[10px] top-[10px]" />
+                <img src={assets.iconLightning2} alt="" class="absolute w-[10px] h-[13px] left-[5px] top-[2px]" />
+              </div>
+              <h3 class="text-white font-bold text-[20.202px] leading-[1.52] mb-2 drop-shadow-sm">Tempo real</h3>
+              <p class="text-white font-light text-[14.43px] leading-[1.2] drop-shadow-sm">
+                Acompanha cada transação automaticamente.<br/>Você não precisa fazer nada
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Insights avançados -->
+          <div class="group relative w-full md:w-[320px] lg:w-[392px] h-[180px] lg:h-[206px] rounded-[34.632px] overflow-hidden shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] transition-all duration-300 hover:shadow-[0_8px_40px_0_rgba(31,38,135,0.5)] hover:scale-[1.02]" style="border: 1px solid rgba(255,255,255,0.1);">
+            <!-- Center blur layer (no distortion) -->
+            <div class="absolute inset-0 rounded-[34.632px]" style="background: rgba(0, 0, 0, 0.00); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);"></div>
+            <!-- Edge-only distortion layer -->
+            <div class="absolute inset-0 rounded-[34.632px] pointer-events-none" style="background: transparent; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); filter: url(#liquid-glass-distortion); mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%); -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%);"></div>
+            <div class="relative flex flex-col items-center justify-center h-full text-center px-6 z-10">
+              <!-- Share Icon -->
+              <div class="relative w-10 h-10 mb-4">
+                <img src={assets.iconShare1} alt="" class="absolute w-[6px] h-[6px] left-[15px] top-[2px]" />
+                <img src={assets.iconShare1} alt="" class="absolute w-[6px] h-[6px] left-[3px] top-[9px]" />
+                <img src={assets.iconShare1} alt="" class="absolute w-[6px] h-[6px] left-[15px] top-[17px]" />
+                <img src={assets.iconShare2} alt="" class="absolute w-[8px] h-[3px] left-[8px] top-[6px] rotate-[-45deg]" />
+                <img src={assets.iconShare3} alt="" class="absolute w-[9px] h-[3px] left-[8px] top-[14px] rotate-[-135deg]" />
+              </div>
+              <h3 class="text-white font-bold text-[20.202px] leading-[1.52] mb-2 drop-shadow-sm">Insights avançados</h3>
+              <p class="text-white font-light text-[14.43px] leading-[1.2] drop-shadow-sm">
+                Entende seus padrões e sugere melhorias<br/>personalizadas para você.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: Sempre com você -->
+          <div class="group relative w-full md:w-[320px] lg:w-[392px] h-[180px] lg:h-[206px] rounded-[34.632px] overflow-hidden shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] transition-all duration-300 hover:shadow-[0_8px_40px_0_rgba(31,38,135,0.5)] hover:scale-[1.02]" style="border: 1px solid rgba(255,255,255,0.1);">
+            <!-- Center blur layer (no distortion) -->
+            <div class="absolute inset-0 rounded-[34.632px]" style="background: rgba(0, 0, 0, 0.00); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);"></div>
+            <!-- Edge-only distortion layer -->
+            <div class="absolute inset-0 rounded-[34.632px] pointer-events-none" style="background: transparent; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); filter: url(#liquid-glass-distortion); mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%); -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%);"></div>
+            <div class="relative flex flex-col items-center justify-center h-full text-center px-6 z-10">
+              <!-- Color Palette Icon -->
+              <div class="relative w-10 h-10 mb-4">
+                <img src={assets.iconPalette1} alt="" class="absolute w-[10px] h-[20px] left-[2px] top-[2px]" />
+                <img src={assets.iconPalette2} alt="" class="absolute w-[8px] h-[14px] left-[14px] top-[3px]" />
+                <img src={assets.iconPalette3} alt="" class="absolute w-[9px] h-[10px] left-[14px] top-[13px]" />
+              </div>
+              <h3 class="text-white font-bold text-[20.202px] leading-[1.52] mb-2 drop-shadow-sm">Sempre com você</h3>
+              <p class="text-white font-light text-[14.43px] leading-[1.2] drop-shadow-sm">
+                No app ou por mensagem. Clara está onde<br/>você precisa!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Section -->
+    <section class="bg-white py-20 lg:py-32 px-6">
+      <div class="max-w-7xl mx-auto">
+        <!-- Badge -->
+        <div class="flex justify-center mb-8">
+          <span class="bg-gradient-to-r from-[#1b329a] to-[#728fbf] text-white px-6 py-2 rounded-full text-sm font-medium">
+            IA ANÁLISE
+          </span>
+        </div>
+
+        <!-- Title -->
+        <h2 class="text-3xl lg:text-5xl text-center font-bold mb-4">
+          A IA que <span class="text-[#383838]">entende você</span><br />
+          <span class="bg-gradient-to-r from-[#1b329a] to-[#728fbf] bg-clip-text text-transparent">e entende seu bolso!</span>
+        </h2>
+        <p class="text-center text-[#8c8787] text-lg lg:text-xl mb-16 max-w-2xl mx-auto">
+          Tudo o que você precisa para ter controle financeiro
+        </p>
+
+        <!-- Analysis Card -->
+        <div class="bg-gradient-to-l from-[#1b329a] to-[#476fb5] rounded-[50px] p-8 lg:p-12 relative overflow-hidden">
+          <!-- Glass decorations -->
+          <div class="absolute -top-20 -right-20 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+          <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+
+          <div class="relative z-10 flex flex-col lg:flex-row gap-8 lg:gap-16">
+            <!-- Left Content -->
+            <div class="flex-1">
+              <!-- Tag -->
+              <div class="flex gap-2 mb-6">
+                <span class="bg-white/10 text-white px-4 py-1.5 rounded-full text-sm border border-white/20">
+                  IA Avançada
+                </span>
+              </div>
+
+              <h3 class="text-3xl lg:text-4xl text-white font-semibold mb-2 leading-tight">
+                Análise Comportamental<br />Preditiva
+              </h3>
+
+              <p class="text-white/80 text-lg mt-6 mb-8 leading-relaxed">
+                Clara aprende seus padrões de consumo e <span class="font-bold text-white">prevê como você vai gastar nos próximos 3 meses.</span><br />
+                Nossa IA identifica automaticamente oportunidades de economia antes que você perceba.
+              </p>
+
+              <!-- Features list -->
+              <div class="grid grid-cols-2 gap-4 text-white">
+                <div class="flex items-center gap-2">
+                  <div class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <span>Previsão de 3 meses</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <span>Economia automática</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <span>Alertas antecipados</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <span>Metas inteligentes</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Card - Projection -->
+            <div class="w-full lg:w-[400px] bg-white/10 backdrop-blur rounded-[40px] p-6 border border-white/10">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <p class="text-white/60 text-xs tracking-wider">PROJEÇÃO</p>
+                  <p class="text-white font-bold text-lg">Próximos 3 meses</p>
+                </div>
+                <div class="bg-[#18c47f]/40 text-[#18c47f] px-3 py-1 rounded-full text-sm flex items-center gap-1">
+                  <svg class="w-4 h-4 rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                  </svg>
+                  -14%
+                </div>
+              </div>
+
+              <!-- Tabs -->
+              <div class="flex gap-2 mb-6">
+                <button class="bg-white text-[#1b329a] px-4 py-1.5 rounded-full text-sm font-medium">Gastos</button>
+                <button class="bg-white/20 text-white/60 px-4 py-1.5 rounded-full text-sm">Receitas</button>
+                <button class="bg-white/20 text-white/60 px-4 py-1.5 rounded-full text-sm">Saldo</button>
+              </div>
+
+              <!-- Chart placeholder -->
+              <div class="h-32 mb-4 flex items-end justify-around">
+                <div class="flex flex-col items-center gap-2">
+                  <div class="w-16 bg-gradient-to-t from-[#728fbf] to-[#1b329a] rounded-t-lg h-20"></div>
+                  <span class="text-white/40 text-xs">Dez</span>
+                  <span class="text-white font-bold text-sm">R$ 4.2k</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                  <div class="w-16 bg-gradient-to-t from-[#728fbf] to-[#1b329a] rounded-t-lg h-16"></div>
+                  <span class="text-white/40 text-xs">Jan</span>
+                  <span class="text-white font-bold text-sm">R$ 3.9k</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                  <div class="w-16 bg-gradient-to-t from-[#728fbf] to-[#1b329a] rounded-t-lg h-12"></div>
+                  <span class="text-white/40 text-xs">Fev</span>
+                  <span class="text-white font-bold text-sm">R$ 3.6k</span>
+                </div>
+              </div>
+
+              <!-- Stats -->
+              <div class="grid grid-cols-2 gap-4 mt-6">
+                <div class="bg-[#18c47f]/30 rounded-2xl p-4 text-center">
+                  <p class="text-[#18c47f] text-2xl font-bold">R$ 600</p>
+                  <p class="text-white/60 text-sm">Economia/mês</p>
+                </div>
+                <div class="bg-white/20 rounded-2xl p-4 text-center">
+                  <p class="text-white text-2xl font-bold">95%</p>
+                  <p class="text-white/60 text-sm">Precisão</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benefits Grid - Glassmorphism style from Figma -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+          <!-- Card 1: Previsão de gastos -->
+          <div class="relative w-full h-[189px] rounded-[31.785px] overflow-hidden shadow-[0_2.573px_19.041px_0_rgba(0,0,0,0.25)] hover:shadow-[0_4px_24px_0_rgba(0,0,0,0.3)] transition-shadow" style="background: rgba(0, 0, 0, 0); backdrop-filter: blur(10px);">
+            <div class="flex flex-col items-center justify-center h-full text-center px-5">
+              <!-- Lightning Icon -->
+              <div class="relative w-9 h-9 mb-3">
+                <img src={assets.iconLightningBenefits1} alt="" class="absolute w-[10px] h-[13px] left-[10px] top-[10px]" />
+                <img src={assets.iconLightningBenefits2} alt="" class="absolute w-[10px] h-[13px] left-[5px] top-[2px]" />
+              </div>
+              <h4 class="text-black font-bold text-[18.541px] leading-[1.52] mb-1">Previsão de gastos</h4>
+              <p class="text-black font-light text-[13.244px] leading-[1.2]">
+                Acompanha cada transação automaticamente. Você não precisa fazer nada
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Captura de economias -->
+          <div class="relative w-full h-[189px] rounded-[31.785px] overflow-hidden shadow-[0_2.573px_19.041px_0_rgba(0,0,0,0.25)] hover:shadow-[0_4px_24px_0_rgba(0,0,0,0.3)] transition-shadow" style="background: rgba(0, 0, 0, 0); backdrop-filter: blur(10px);">
+            <div class="flex flex-col items-center justify-center h-full text-center px-5">
+              <!-- Wallet Icon -->
+              <div class="relative w-9 h-9 mb-3">
+                <img src={assets.iconWallet1} alt="" class="absolute w-[30px] h-[24px] left-[3px] top-[9px]" />
+                <img src={assets.iconWallet2} alt="" class="absolute w-[9px] h-[5px] left-[24px] top-[18px]" />
+                <img src={assets.iconWallet3} alt="" class="absolute w-[26px] h-[7px] left-[3px] top-[3px]" />
+              </div>
+              <h4 class="text-black font-bold text-[18.541px] leading-[1.52] mb-1">Captura de economias</h4>
+              <p class="text-black font-light text-[13.244px] leading-[1.2]">
+                Identificamos automaticamente onde você pode economizar dinheiro.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: Alertas preditivos -->
+          <div class="relative w-full h-[189px] rounded-[31.785px] overflow-hidden shadow-[0_2.573px_19.041px_0_rgba(0,0,0,0.25)] hover:shadow-[0_4px_24px_0_rgba(0,0,0,0.3)] transition-shadow" style="background: rgba(0, 0, 0, 0); backdrop-filter: blur(10px);">
+            <div class="flex flex-col items-center justify-center h-full text-center px-5">
+              <!-- Bell Icon -->
+              <div class="relative w-9 h-9 mb-3">
+                <img src={assets.iconBell1} alt="" class="absolute w-[24px] h-[25px] left-[6px] top-[3px]" />
+                <img src={assets.iconBell2} alt="" class="absolute w-[7px] h-[2px] left-[14px] top-[31px]" />
+              </div>
+              <h4 class="text-black font-bold text-[18.541px] leading-[1.52] mb-1">Alertas preditivos</h4>
+              <p class="text-black font-light text-[13.244px] leading-[1.2]">
+                Avisamos antes que um gasto fuja do controle.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4: Metas adaptativas -->
+          <div class="relative w-full h-[189px] rounded-[31.785px] overflow-hidden shadow-[0_2.573px_19.041px_0_rgba(0,0,0,0.25)] hover:shadow-[0_4px_24px_0_rgba(0,0,0,0.3)] transition-shadow" style="background: rgba(0, 0, 0, 0); backdrop-filter: blur(10px);">
+            <div class="flex flex-col items-center justify-center h-full text-center px-5">
+              <!-- Rocket Icon -->
+              <div class="relative w-9 h-9 mb-3">
+                <img src={assets.iconRocket1} alt="" class="absolute w-[28px] h-[28px] left-[2px] top-[2px]" />
+                <img src={assets.iconRocket2} alt="" class="absolute w-[8px] h-[5px] left-[1px] top-[21px] rotate-45" />
+                <img src={assets.iconRocket3} alt="" class="absolute w-[5px] h-[5px] left-[16px] top-[8px] rotate-45" />
+              </div>
+              <h4 class="text-black font-bold text-[18.541px] leading-[1.52] mb-1">Metas adaptativas</h4>
+              <p class="text-black font-light text-[13.244px] leading-[1.2]">
+                Suas metas se ajustam ao seu comportamento.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arrow down -->
+        <div class="flex justify-center mt-12">
+          <svg class="w-6 h-6 text-[#1b329a] animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="como-funciona" class="bg-white py-20 lg:py-32 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl lg:text-5xl text-center font-bold text-[#383838] mb-4">
+          Como funciona?
+        </h2>
+        <p class="text-center text-[#8c8787] text-lg mb-16">
+          A jornada perfeita para ter mais com todo financeiro
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+          <!-- Step 1 -->
+          <div class="flex gap-6">
+            <div class="text-6xl lg:text-8xl font-bold bg-gradient-to-b from-[#1b329a] to-[#728fbf] bg-clip-text text-transparent leading-none">
+              1
+            </div>
+            <div>
+              <h3 class="text-xl lg:text-2xl font-semibold text-[#1b329a] mb-2">Conecte suas contas</h3>
+              <p class="text-[#8c8787]">
+                Conecte suas contas bancárias com total segurança. Clara analisa seus gastos em poucos segundos.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex gap-6">
+            <div class="text-6xl lg:text-8xl font-bold bg-gradient-to-b from-[#1b329a] to-[#728fbf] bg-clip-text text-transparent leading-none">
+              2
+            </div>
+            <div>
+              <h3 class="text-xl lg:text-2xl font-semibold text-[#1b329a] mb-2">Viva normalmente</h3>
+              <p class="text-[#8c8787]">
+                Não mude nada. Faça compras como você sempre fez. Clara aprende seu ritmo.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex gap-6">
+            <div class="text-6xl lg:text-8xl font-bold bg-gradient-to-b from-[#1b329a] to-[#728fbf] bg-clip-text text-transparent leading-none">
+              3
+            </div>
+            <div>
+              <h3 class="text-xl lg:text-2xl font-semibold text-[#1b329a] mb-2">Receba insights</h3>
+              <p class="text-[#8c8787]">
+                Receba insights personalizados sobre onde você pode economizar de forma inteligente.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex gap-6">
+            <div class="text-6xl lg:text-8xl font-bold bg-gradient-to-b from-[#1b329a] to-[#728fbf] bg-clip-text text-transparent leading-none">
+              4
+            </div>
+            <div>
+              <h3 class="text-xl lg:text-2xl font-semibold text-[#1b329a] mb-2">Mais controle na palma da mão</h3>
+              <p class="text-[#8c8787]">
+                Você controla mais com facilidade do dinheiro, a meta está a um passo do esperado.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="flex justify-center mt-16">
+          <a href="#" class="bg-white border-2 border-[#1b329a] text-[#1b329a] px-8 py-4 rounded-full text-lg font-medium hover:bg-[#1b329a] hover:text-white transition-all">
+            Fale com a Clara →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero Image Section -->
+    <section class="relative h-[600px] lg:h-[800px] overflow-hidden">
+      <div class="absolute inset-0">
+        <img
+          src={assets.heroImage}
+          alt="Pessoa usando smartphone"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
+      </div>
+
+      <!-- Alert Card -->
+      <div class="absolute left-6 lg:left-20 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-xl rounded-3xl p-6 max-w-md border border-white/30">
+        <div class="flex items-start gap-4">
+          <div class="w-16 h-16 bg-white/30 backdrop-blur rounded-2xl flex items-center justify-center shrink-0 border border-white/40">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+          </div>
+          <div class="text-white">
+            <p class="font-semibold text-lg mb-1">
+              Alerta de próximo vencimento
+            </p>
+            <p class="text-white/80">
+              Sua conta de internet no valor de R$ 97,95 vence em 3 dias.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="bg-white py-20 lg:py-32 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl lg:text-5xl font-bold mb-4">
+          <span class="text-[#383838]">Pronto para ter </span>
+          <span class="bg-gradient-to-r from-[#1b329a] to-[#728fbf] bg-clip-text text-transparent">Clara?</span>
+        </h2>
+        <p class="text-[#8c8787] text-lg lg:text-xl mb-12">
+          Entre para a lista de espera e seja um dos primeiros a experimentar
+        </p>
+
+        <!-- Email Form -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-xl mx-auto">
+          <input
+            type="email"
+            placeholder="seu@email.com"
+            class="w-full sm:flex-1 px-6 py-4 bg-[#ededed] rounded-full text-lg text-[#383838] placeholder-[#c0c0c0] focus:outline-none focus:ring-2 focus:ring-[#1b329a]"
+          />
+          <button class="w-full sm:w-auto bg-gradient-to-r from-[#728fbf] to-[#1b329a] text-white px-8 py-4 rounded-full text-lg font-medium hover:opacity-90 transition-opacity whitespace-nowrap">
+            Entrar →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-l from-[#1b329a] to-[#476fb5] py-8 px-6">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <img src={assets.logo} alt="Clara" class="h-6" />
+        <nav class="flex gap-6 text-white/60 text-sm">
+          <a href="#" class="hover:text-white transition-colors">Privacidade</a>
+          <a href="#" class="hover:text-white transition-colors">Termos</a>
+          <a href="#" class="hover:text-white transition-colors">Contato</a>
+        </nav>
+        <p class="text-white/40 text-sm">© 2025 Clara</p>
+      </div>
+    </footer>
+  </body>
 </html>
