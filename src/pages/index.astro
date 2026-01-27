@@ -40,18 +40,22 @@ const assets = {
   // Benefits card Lightning icon (colored version)
   iconLightningBenefits1: "https://www.figma.com/api/mcp/asset/b58a1505-a638-4842-a71d-0e74e918d986",
   iconLightningBenefits2: "https://www.figma.com/api/mcp/asset/d2a701b3-b35c-45d8-8e61-b47e04f97e5b",
-  // How it works section icons
-  iconShareWhite: "https://www.figma.com/api/mcp/asset/b5a1c94a-e360-4cda-9ce2-a3d634e52433",
-  iconShareLine1: "https://www.figma.com/api/mcp/asset/f3cbbe23-0226-4a38-a291-a811b659321c",
-  iconShareLine2: "https://www.figma.com/api/mcp/asset/aef0563a-c95b-4ebc-85d9-a23454cf7ca7",
-  iconUserHead: "https://www.figma.com/api/mcp/asset/508cd2db-2ac2-44d4-a9fd-39e4c071a608",
-  iconUserBody: "https://www.figma.com/api/mcp/asset/bbc4d6b8-2fa5-48db-b335-41a34d6b9803",
-  iconChartBg: "https://www.figma.com/api/mcp/asset/c9bc9a09-14d7-4658-80e3-6694a38c1c29",
-  iconChartLine: "https://www.figma.com/api/mcp/asset/1f15e368-3034-4ec8-bcd4-8a239f4b1696",
-  iconChartDot: "https://www.figma.com/api/mcp/asset/e19bb716-559a-4dfc-b1c8-259fccf36328",
-  iconPaletteLeft: "https://www.figma.com/api/mcp/asset/46d17290-d3e9-4df5-9d10-e125267ef895",
-  iconPaletteTopRight: "https://www.figma.com/api/mcp/asset/a7386325-d08a-40f7-83cb-453399abd568",
-  iconPaletteBottomRight: "https://www.figma.com/api/mcp/asset/92a9c2f8-21c5-4104-ad77-80f0d3d79cf1",
+  // How it works section icons (from Figma)
+  // Step 1 - Share icon
+  stepShareCircle: "https://www.figma.com/api/mcp/asset/bfb45121-8639-45ae-8ba4-5e21852b7e2d",
+  stepShareLine1: "https://www.figma.com/api/mcp/asset/62b24edb-7e91-48f9-a212-1ee39f5dfdda",
+  stepShareLine2: "https://www.figma.com/api/mcp/asset/db474f63-ef85-4578-b3f6-8b0f2ea9830c",
+  // Step 2 - User icon
+  stepUserHead: "https://www.figma.com/api/mcp/asset/2cb6a168-2cf5-4571-b81b-796f7d28786a",
+  stepUserBody: "https://www.figma.com/api/mcp/asset/96126cb6-9cc4-40e9-8f0c-5afa28ef4438",
+  // Step 3 - Chart icon
+  stepChartBg: "https://www.figma.com/api/mcp/asset/06bc6880-0094-40fe-a4a0-a6ca3b799bed",
+  stepChartLine: "https://www.figma.com/api/mcp/asset/95efd7bc-ae9b-44d5-88a8-0d8244fbcdc7",
+  stepChartDot: "https://www.figma.com/api/mcp/asset/741889b5-96f3-4d79-b2d8-fa471ab3ccae",
+  // Step 4 - Palette icon
+  stepPaletteLeft: "https://www.figma.com/api/mcp/asset/3651637a-9440-4d99-bf0b-8d8ad75d9848",
+  stepPaletteTopRight: "https://www.figma.com/api/mcp/asset/aa4d67a9-1577-4dc9-8b5e-4d335bf0f2bf",
+  stepPaletteBottomRight: "https://www.figma.com/api/mcp/asset/f3cbf6e1-855b-46e4-aca1-bd574c605705",
   // Hero image section
   heroImagePerson: "https://www.figma.com/api/mcp/asset/9e589693-da86-449c-b59b-746e73552287",
   alertLogo: "https://www.figma.com/api/mcp/asset/2a2c2640-0d73-439e-a79a-a33901f3ef6d",
@@ -473,100 +477,100 @@ const assets = {
         <h2 class="text-3xl lg:text-5xl text-center font-bold text-white mb-4">
           Como funciona?
         </h2>
-        <p class="text-center text-white/70 text-lg mb-16">
+        <p class="text-center text-white/70 text-lg mb-16" style="font-family: 'Inter', sans-serif; font-weight: 200;">
           4 passos simples para ter mais controle financeiro.
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           <!-- Step 1 -->
           <div class="flex items-center gap-4">
-            <div class="text-[120px] lg:text-[180px] font-bold text-white/20 leading-none" style="font-family: 'Inter', sans-serif;">
+            <div class="text-[80px] lg:text-[120px] font-bold leading-none w-[50px] lg:w-[80px] text-center" style="font-family: 'Inter', sans-serif; color: rgba(255, 255, 255, 1);">
               1
             </div>
-            <div class="relative rounded-[53px] overflow-hidden shadow-[0px_4.32px_31.97px_0px_rgba(0,0,0,0.25)] flex-1" style="border: 1px solid rgba(255,255,255,0.25);">
-              <div class="absolute inset-0" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
-              <div class="relative z-10 p-6 lg:p-8 flex items-start gap-4">
-                <svg class="w-12 h-12 shrink-0" viewBox="0 0 24 24" fill="none">
-                  <line x1="8.5" y1="10.5" x2="15.5" y2="6.5" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
-                  <line x1="8.5" y1="13.5" x2="15.5" y2="17.5" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
-                  <circle cx="18" cy="5" r="3" fill="white"/>
-                  <circle cx="6" cy="12" r="3" fill="white"/>
-                  <circle cx="18" cy="19" r="3" fill="white"/>
-                </svg>
-                <div>
-                  <h3 class="text-xl lg:text-[31px] font-bold text-white mb-2" style="font-family: 'Inter', sans-serif;">Conecte suas contas</h3>
-                  <p class="text-white/80 text-base lg:text-[22px]" style="font-family: 'Inter', sans-serif; font-weight: 300;">
-                    Clara se conecta com seus bancos de forma segura. <span class="text-white">Leva menos de 2 minutos</span>
-                  </p>
+            <div class="relative rounded-[24px] lg:rounded-[53px] overflow-hidden shadow-[0px_4.32px_31.97px_0px_rgba(0,0,0,0.25)] flex-1 h-[140px] lg:h-[236px] max-h-[140px] lg:max-h-[236px] -ml-6 lg:-ml-10" style="border: 1px solid rgba(255,255,255,0.25);">
+              <div class="absolute inset-0 rounded-[24px] lg:rounded-[53px]" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
+              <div class="relative z-10 p-4 lg:p-6 flex flex-col justify-center h-full">
+                <div class="flex items-center gap-3 mb-1">
+                  <svg class="w-8 h-8 lg:w-10 lg:h-10 shrink-0" viewBox="0 0 24 24" fill="none">
+                    <circle cx="18" cy="5" r="2.5" fill="white"/>
+                    <circle cx="6" cy="12" r="2.5" fill="white"/>
+                    <circle cx="18" cy="19" r="2.5" fill="white"/>
+                    <line x1="8" y1="10.5" x2="16" y2="6" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="8" y1="13.5" x2="16" y2="18" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                  <h3 class="text-lg lg:text-2xl font-bold text-white whitespace-nowrap" style="font-family: 'Inter', sans-serif;">Conecte suas contas</h3>
                 </div>
+                <p class="text-white/80 text-base lg:text-lg line-clamp-2 ml-11 lg:ml-13" style="font-family: 'Inter', sans-serif; font-weight: 300;">
+                  Clara se conecta com seus bancos de forma segura. <span class="text-white">Leva menos de 2 minutos</span>
+                </p>
               </div>
             </div>
           </div>
 
           <!-- Step 2 -->
           <div class="flex items-center gap-4">
-            <div class="text-[120px] lg:text-[180px] font-bold text-white/20 leading-none" style="font-family: 'Inter', sans-serif;">
+            <div class="text-[80px] lg:text-[120px] font-bold leading-none w-[50px] lg:w-[80px] text-center shrink-0" style="font-family: 'Inter', sans-serif; color: rgba(255, 255, 255, 1);">
               2
             </div>
-            <div class="relative rounded-[53px] overflow-hidden shadow-[0px_4.32px_31.97px_0px_rgba(0,0,0,0.25)] flex-1" style="border: 1px solid rgba(255,255,255,0.25);">
-              <div class="absolute inset-0" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
-              <div class="relative z-10 p-6 lg:p-8 flex items-start gap-4">
-                <svg class="w-12 h-12 shrink-0" viewBox="0 0 24 24" fill="none">
-                  <circle cx="12" cy="8" r="4" fill="white"/>
-                  <path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <div>
-                  <h3 class="text-xl lg:text-[31px] font-bold text-white mb-2" style="font-family: 'Inter', sans-serif;">Viva normalmente</h3>
-                  <p class="text-white/80 text-base lg:text-[22px]" style="font-family: 'Inter', sans-serif; font-weight: 300;">
-                    Clara acompanha tudo em tempo real, <span class="text-white">sem você precisar fazer nada.</span>
-                  </p>
+            <div class="relative rounded-[24px] lg:rounded-[53px] overflow-hidden shadow-[0px_4.32px_31.97px_0px_rgba(0,0,0,0.25)] flex-1 h-[140px] lg:h-[236px] max-h-[140px] lg:max-h-[236px] -ml-6 lg:-ml-10" style="border: 1px solid rgba(255,255,255,0.25);">
+              <div class="absolute inset-0 rounded-[24px] lg:rounded-[53px]" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
+              <div class="relative z-10 p-4 lg:p-6 flex flex-col justify-center h-full">
+                <div class="flex items-center gap-3 mb-1">
+                  <div class="w-8 h-8 lg:w-10 lg:h-10 shrink-0 relative">
+                    <img src={assets.stepUserHead} alt="" class="absolute w-[14px] h-[14px] left-[11px] top-[2px]" />
+                    <img src={assets.stepUserBody} alt="" class="absolute w-[24px] h-[12px] left-[6px] top-[18px]" />
+                  </div>
+                  <h3 class="text-lg lg:text-2xl font-bold text-white whitespace-nowrap" style="font-family: 'Inter', sans-serif;">Viva normalmente</h3>
                 </div>
+                <p class="text-white/80 text-base lg:text-lg line-clamp-2 ml-11 lg:ml-13" style="font-family: 'Inter', sans-serif; font-weight: 300;">
+                  Clara acompanha tudo em tempo real, <span class="text-white">sem você precisar fazer nada.</span>
+                </p>
               </div>
             </div>
           </div>
 
           <!-- Step 3 -->
           <div class="flex items-center gap-4">
-            <div class="text-[120px] lg:text-[180px] font-bold text-white/20 leading-none" style="font-family: 'Inter', sans-serif;">
+            <div class="text-[80px] lg:text-[120px] font-bold leading-none w-[50px] lg:w-[80px] text-center shrink-0" style="font-family: 'Inter', sans-serif; color: rgba(255, 255, 255, 1);">
               3
             </div>
-            <div class="relative rounded-[53px] overflow-hidden shadow-[0px_4.32px_31.97px_0px_rgba(0,0,0,0.25)] flex-1" style="border: 1px solid rgba(255,255,255,0.25);">
-              <div class="absolute inset-0" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
-              <div class="relative z-10 p-6 lg:p-8 flex items-start gap-4">
-                <svg class="w-12 h-12 shrink-0" viewBox="0 0 24 24" fill="none">
-                  <rect x="3" y="3" width="18" height="18" rx="4" fill="rgba(255,255,255,0.3)"/>
-                  <path d="M7 14l3-3 3 3 4-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <circle cx="18" cy="6" r="2" fill="white"/>
-                </svg>
-                <div>
-                  <h3 class="text-xl lg:text-[31px] font-bold text-white mb-2" style="font-family: 'Inter', sans-serif;">Receba insights</h3>
-                  <p class="text-white/80 text-base lg:text-[22px]" style="font-family: 'Inter', sans-serif; font-weight: 300;">
-                    Alertas inteligentes quando algo precisar de sua atenção.
-                  </p>
+            <div class="relative rounded-[24px] lg:rounded-[53px] overflow-hidden shadow-[0px_4.32px_31.97px_0px_rgba(0,0,0,0.25)] flex-1 h-[140px] lg:h-[236px] max-h-[140px] lg:max-h-[236px] -ml-6 lg:-ml-10" style="border: 1px solid rgba(255,255,255,0.25);">
+              <div class="absolute inset-0 rounded-[24px] lg:rounded-[53px]" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
+              <div class="relative z-10 p-4 lg:p-6 flex flex-col justify-center h-full">
+                <div class="flex items-center gap-3 mb-1">
+                  <div class="w-8 h-8 lg:w-10 lg:h-10 shrink-0 relative">
+                    <img src={assets.stepChartBg} alt="" class="absolute w-[32px] h-[32px] left-[2px] top-[2px]" />
+                    <img src={assets.stepChartLine} alt="" class="absolute w-[14px] h-[8px] left-[10px] top-[14px]" />
+                    <img src={assets.stepChartDot} alt="" class="absolute w-[6px] h-[6px] left-[28px] top-[4px]" />
+                  </div>
+                  <h3 class="text-lg lg:text-2xl font-bold text-white whitespace-nowrap" style="font-family: 'Inter', sans-serif;">Receba insights</h3>
                 </div>
+                <p class="text-white/80 text-base lg:text-lg line-clamp-2 ml-11 lg:ml-13" style="font-family: 'Inter', sans-serif; font-weight: 300;">
+                  Alertas inteligentes quando algo precisar de sua atenção.
+                </p>
               </div>
             </div>
           </div>
 
           <!-- Step 4 -->
           <div class="flex items-center gap-4">
-            <div class="text-[120px] lg:text-[180px] font-bold text-white/20 leading-none" style="font-family: 'Inter', sans-serif;">
+            <div class="text-[80px] lg:text-[120px] font-bold leading-none w-[50px] lg:w-[80px] text-center shrink-0" style="font-family: 'Inter', sans-serif; color: rgba(255, 255, 255, 1);">
               4
             </div>
-            <div class="relative rounded-[53px] overflow-hidden shadow-[0px_4.32px_31.97px_0px_rgba(0,0,0,0.25)] flex-1" style="border: 1px solid rgba(255,255,255,0.25);">
-              <div class="absolute inset-0" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
-              <div class="relative z-10 p-6 lg:p-8 flex items-start gap-4">
-                <svg class="w-12 h-12 shrink-0" viewBox="0 0 24 24" fill="none">
-                  <rect x="4" y="2" width="8" height="20" rx="2" fill="white"/>
-                  <rect x="14" y="5" width="6" height="11" rx="1" fill="rgba(255,255,255,0.5)"/>
-                  <rect x="14" y="13" width="7" height="8" rx="1" fill="rgba(255,255,255,0.3)"/>
-                </svg>
-                <div>
-                  <h3 class="text-xl lg:text-[31px] font-bold text-white mb-2" style="font-family: 'Inter', sans-serif;">Mais controle na palma da mão</h3>
-                  <p class="text-white/80 text-base lg:text-[22px]" style="font-family: 'Inter', sans-serif; font-weight: 300;">
-                    Clara descomplica suas finanças e te ajuda a viver <span class="text-white">mais tranquilo e preparado!</span>
-                  </p>
+            <div class="relative rounded-[24px] lg:rounded-[53px] overflow-hidden shadow-[0px_4.32px_31.97px_0px_rgba(0,0,0,0.25)] flex-1 h-[140px] lg:h-[236px] max-h-[140px] lg:max-h-[236px] -ml-6 lg:-ml-10" style="border: 1px solid rgba(255,255,255,0.25);">
+              <div class="absolute inset-0 rounded-[24px] lg:rounded-[53px]" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
+              <div class="relative z-10 p-4 lg:p-6 flex flex-col justify-center h-full">
+                <div class="flex items-center gap-3 mb-1">
+                  <div class="w-8 h-8 lg:w-10 lg:h-10 shrink-0 relative">
+                    <img src={assets.stepPaletteLeft} alt="" class="absolute w-[16px] h-[32px] left-[2px] top-[2px]" />
+                    <img src={assets.stepPaletteTopRight} alt="" class="absolute w-[12px] h-[20px] left-[20px] top-[4px]" />
+                    <img src={assets.stepPaletteBottomRight} alt="" class="absolute w-[14px] h-[16px] left-[20px] top-[18px]" />
+                  </div>
+                  <h3 class="text-lg lg:text-2xl font-bold text-white whitespace-nowrap" style="font-family: 'Inter', sans-serif;">Mais controle na palma da mão</h3>
                 </div>
+                <p class="text-white/80 text-base lg:text-lg line-clamp-2 ml-11 lg:ml-13" style="font-family: 'Inter', sans-serif; font-weight: 300;">
+                  Clara descomplica suas finanças e te ajuda a viver <span class="text-white">mais tranquilo e preparado!</span>
+                </p>
               </div>
             </div>
           </div>
