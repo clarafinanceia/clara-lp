@@ -59,6 +59,7 @@ const assets = {
   // Hero image section
   heroImagePerson: "https://www.figma.com/api/mcp/asset/9e589693-da86-449c-b59b-746e73552287",
   alertLogo: "https://www.figma.com/api/mcp/asset/7f3408a4-1740-4dc1-897f-115d5c2cee08",
+  logoBlue: "https://www.figma.com/api/mcp/asset/78b4e783-dc9e-4807-ac28-e607b0f1c53c",
 };
 
 ---
@@ -124,7 +125,7 @@ const assets = {
 
             <span class="text-white/30 text-lg">|</span>
 
-            <a href="#" class="flex items-center gap-2 text-[18px] hover:opacity-80 transition-opacity" style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700;">
+            <a href="#entrar" class="flex items-center gap-2 text-[18px] hover:opacity-80 transition-opacity" style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700;">
               <span class="bg-gradient-to-l from-white to-[#728fbf] bg-clip-text" style="-webkit-text-fill-color: transparent;">Entrar</span>
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
                 <circle cx="12" cy="8" r="4" fill="url(#userGradient)" />
@@ -578,7 +579,7 @@ const assets = {
 
         <!-- CTA Button -->
         <div class="flex justify-center mt-16">
-          <a href="#" class="relative rounded-full overflow-hidden px-10 py-4 text-lg font-medium text-white transition-all hover:scale-105" style="border: 1px solid rgba(255,255,255,0.25);">
+          <a href="#entrar" class="relative rounded-full overflow-hidden px-10 py-4 text-lg font-medium text-white transition-all hover:scale-105 cursor-pointer" style="border: 1px solid rgba(255,255,255,0.25);">
             <div class="absolute inset-0" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
             <span class="relative z-10">Fale com a Clara →</span>
           </a>
@@ -627,7 +628,8 @@ const assets = {
     </section>
 
     <!-- Final CTA Section -->
-    <section class="bg-white py-20 lg:py-32 px-6 rounded-t-[30px] lg:rounded-t-[60px] relative z-20 -mt-12">
+    <section id="entrar" class="bg-white py-20 lg:py-32 px-6 rounded-t-[30px] lg:rounded-t-[60px] relative z-20 -mt-12">
+
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl lg:text-5xl font-bold mb-4">
           <span class="text-[#383838]">Pronto para ter </span>
@@ -638,13 +640,13 @@ const assets = {
         </p>
 
         <!-- Email Form -->
-        <div class="flex flex-col sm:flex-row gap-0 justify-center items-center max-w-[864px] mx-auto">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-[700px] mx-auto">
           <input
             type="email"
             placeholder="seu@email.com"
-            class="w-full sm:flex-1 px-8 py-5 bg-[#ededed] rounded-full sm:rounded-r-none text-[27px] text-[#383838] placeholder-[#c0c0c0] focus:outline-none focus:ring-2 focus:ring-[#1b329a]" style="font-family: 'Inter', sans-serif;"
+            class="w-full sm:flex-1 px-6 py-4 bg-[#ededed] rounded-full text-[20px] text-[#383838] placeholder-[#c0c0c0] focus:outline-none focus:ring-2 focus:ring-[#1b329a]" style="font-family: 'Inter', sans-serif;"
           />
-          <button class="w-full sm:w-auto bg-gradient-to-r from-[#728fbf] to-[#1b329a] text-white px-10 py-5 rounded-full sm:rounded-l-none text-[27px] font-normal hover:opacity-90 transition-opacity whitespace-nowrap" style="font-family: 'Inter', sans-serif;">
+          <button class="w-full sm:w-auto bg-gradient-to-r from-[#728fbf] to-[#1b329a] text-white px-8 py-4 rounded-full text-[20px] font-normal hover:opacity-90 transition-opacity whitespace-nowrap cursor-pointer" style="font-family: 'Inter', sans-serif;">
             Entrar →
           </button>
         </div>
@@ -658,7 +660,7 @@ const assets = {
     <!-- Footer -->
     <footer class="bg-white py-12 px-6 border-t border-gray-100">
       <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <img src={assets.logo} alt="Clara" class="h-[45px]" />
+        <img src={assets.logoBlue} alt="Clara" width="134" height="45" />
         <nav class="flex gap-8 text-[#8c8787] text-base" style="font-family: 'Inter', sans-serif;">
           <a href="#" class="hover:text-[#1b329a] transition-colors">Privacidade</a>
           <a href="#" class="hover:text-[#1b329a] transition-colors">Termos</a>
