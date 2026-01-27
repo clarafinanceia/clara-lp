@@ -59,7 +59,7 @@ const assets = {
 
 ---
 
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -448,20 +448,25 @@ const assets = {
 
         <!-- Arrow down -->
         <div class="flex justify-center mt-12">
-          <svg class="w-6 h-6 text-[#1b329a] animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
+          <a href="#como-funciona" class="cursor-pointer">
+            <svg class="w-6 h-6 text-[#1b329a] animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>
 
     <!-- How It Works Section -->
-    <section id="como-funciona" class="relative py-20 lg:py-32 px-6 overflow-hidden">
+    <section class="relative pt-44 lg:pt-56 pb-32 lg:pb-48 px-6 -mt-24 lg:-mt-32 overflow-hidden">
+      <span id="como-funciona" class="absolute top-36 lg:top-48"></span>
       <!-- Video Background -->
       <div class="absolute inset-0 w-full h-full">
         <video autoplay loop muted playsinline class="w-full h-full object-cover">
           <source src="/images/header_animado.mp4" type="video/mp4" />
         </video>
+        <!-- Gradient overlay to enhance video quality -->
+        <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(27, 50, 154, 0.4) 0%, rgba(11, 25, 88, 0.5) 50%, rgba(27, 50, 154, 0.4) 100%);"></div>
       </div>
 
       <div class="relative z-10 max-w-6xl mx-auto">
@@ -575,10 +580,9 @@ const assets = {
           </a>
         </div>
       </div>
-    </section>
 
-    <!-- Hero Image Section -->
-    <section class="relative h-[600px] lg:h-[888px] mx-4 lg:mx-20 my-8 rounded-[60px] lg:rounded-[100px] overflow-hidden">
+      <!-- Hero Image Section - inside the blue video area -->
+      <div class="relative h-[600px] lg:h-[888px] mx-4 lg:mx-20 mt-16 rounded-[60px] lg:rounded-[100px] overflow-hidden">
       <div class="absolute inset-0">
         <img
           src={assets.heroImagePerson}
@@ -611,10 +615,11 @@ const assets = {
           </div>
         </div>
       </div>
+      </div>
     </section>
 
     <!-- Final CTA Section -->
-    <section class="bg-white py-20 lg:py-32 px-6 rounded-t-[30px] lg:rounded-t-[60px] relative z-20">
+    <section class="bg-white py-20 lg:py-32 px-6 rounded-t-[30px] lg:rounded-t-[60px] relative z-20 -mt-12">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl lg:text-5xl font-bold mb-4">
           <span class="text-[#383838]">Pronto para ter </span>
