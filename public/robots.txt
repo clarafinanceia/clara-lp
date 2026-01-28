@@ -1,0 +1,10 @@
+# robots.txt for Clara
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://clara.com.br/sitemap.xml
+
+# Disallow admin or private paths (if any)
+Disallow: /api/
+Disallow: /_astro/

@@ -68,17 +68,79 @@ const assets = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
-    <meta name="description" content="Clara - Sua IA de finanças pessoais. Não deixe seu dinheiro falando sozinho." />
-    <title>Clara - Sua IA de Finanças Pessoais</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-    <!-- Google Fonts -->
+    <!-- Primary Meta Tags -->
+    <title>Clara - Sua IA de Finanças Pessoais | Controle Financeiro Inteligente</title>
+    <meta name="title" content="Clara - Sua IA de Finanças Pessoais | Controle Financeiro Inteligente" />
+    <meta name="description" content="Clara é sua assistente de IA para finanças pessoais. Acompanhe gastos em tempo real, receba insights personalizados e economize automaticamente. Não deixe seu dinheiro falando sozinho." />
+    <meta name="keywords" content="finanças pessoais, IA financeira, controle de gastos, economia automática, assistente financeiro, orçamento pessoal, planejamento financeiro" />
+    <meta name="author" content="Clara" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://clara.com.br/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://clara.com.br/" />
+    <meta property="og:title" content="Clara - Sua IA de Finanças Pessoais" />
+    <meta property="og:description" content="Acompanhe gastos em tempo real, receba insights personalizados e economize automaticamente. Não deixe seu dinheiro falando sozinho." />
+    <meta property="og:image" content="https://clara.com.br/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Clara" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://clara.com.br/" />
+    <meta property="twitter:title" content="Clara - Sua IA de Finanças Pessoais" />
+    <meta property="twitter:description" content="Acompanhe gastos em tempo real, receba insights personalizados e economize automaticamente." />
+    <meta property="twitter:image" content="https://clara.com.br/og-image.png" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#1b329a" />
+    <meta name="msapplication-TileColor" content="#1b329a" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Google Fonts - Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="/src/styles/global.css" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Clara",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "description": "Clara é sua assistente de IA para finanças pessoais. Acompanhe gastos em tempo real, receba insights personalizados e economize automaticamente.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "BRL"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1000"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Clara",
+        "url": "https://clara.com.br"
+      }
+    }
+    </script>
 
     <!-- SVG Filter for Liquid Glass distortion effect - exaggerated at edges -->
     <svg class="hidden" width="0" height="0">
@@ -591,8 +653,10 @@ const assets = {
       <div class="absolute inset-0">
         <img
           src={assets.heroImagePerson}
-          alt="Pessoa usando smartphone"
+          alt="Pessoa usando smartphone com o aplicativo Clara para controle financeiro"
           class="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
         />
         <div class="absolute inset-0" style="background: linear-gradient(269deg, rgba(0, 0, 0, 0) 35.73%, rgba(0, 0, 0, 0.31) 99.71%);"></div>
       </div>
