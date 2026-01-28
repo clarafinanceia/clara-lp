@@ -114,7 +114,7 @@ const assets = {
         <!-- Liquid Glass Navigation Pill -->
         <nav class="hidden md:flex items-center relative rounded-full overflow-hidden shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] transition-all duration-300 hover:shadow-[0_8px_40px_0_rgba(31,38,135,0.5)]" style="border: 1px solid rgba(255,255,255,0.1);">
           <!-- Center blur layer (no distortion) -->
-          <div class="absolute inset-0 rounded-full" style="background: rgba(0, 0, 0, 0.00); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);"></div>
+          <div class="absolute inset-0 rounded-full pointer-events-none" style="background: rgba(0, 0, 0, 0.00); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);"></div>
           <!-- Edge-only distortion layer -->
           <div class="absolute inset-0 rounded-full pointer-events-none" style="background: transparent; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); filter: url(#liquid-glass-distortion); mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%); -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%);"></div>
 
@@ -125,8 +125,8 @@ const assets = {
 
             <span class="text-white/30 text-lg">|</span>
 
-            <a href="#entrar" class="flex items-center gap-2 text-[18px] hover:opacity-80 transition-opacity" style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700;">
-              <span class="bg-gradient-to-l from-white to-[#728fbf] bg-clip-text" style="-webkit-text-fill-color: transparent;">Entrar</span>
+            <a href="#cta" class="flex items-center gap-2 text-[18px] hover:opacity-80 transition-opacity cursor-pointer" style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700;">
+              <span class="bg-gradient-to-l from-white to-[#728fbf] bg-clip-text pointer-events-none" style="-webkit-text-fill-color: transparent;">Entrar</span>
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
                 <circle cx="12" cy="8" r="4" fill="url(#userGradient)" />
                 <path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="url(#userGradient)" stroke-width="2" stroke-linecap="round" />
@@ -579,7 +579,7 @@ const assets = {
 
         <!-- CTA Button -->
         <div class="flex justify-center mt-16">
-          <a href="#entrar" class="relative rounded-full overflow-hidden px-10 py-4 text-lg font-medium text-white transition-all hover:scale-105 cursor-pointer" style="border: 1px solid rgba(255,255,255,0.25);">
+          <a href="#cta" class="relative rounded-full overflow-hidden px-10 py-4 text-lg font-medium text-white transition-all hover:scale-105 cursor-pointer" style="border: 1px solid rgba(255,255,255,0.25);">
             <div class="absolute inset-0" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
             <span class="relative z-10">Fale com a Clara →</span>
           </a>
@@ -628,7 +628,7 @@ const assets = {
     </section>
 
     <!-- Final CTA Section -->
-    <section id="entrar" class="bg-white py-20 lg:py-32 px-6 rounded-t-[30px] lg:rounded-t-[60px] relative z-20 -mt-12">
+    <section id="cta" class="bg-white py-20 lg:py-32 px-6 rounded-t-[30px] lg:rounded-t-[60px] relative z-20 -mt-12">
 
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl lg:text-5xl font-bold mb-4">
@@ -646,9 +646,9 @@ const assets = {
             placeholder="seu@email.com"
             class="w-full sm:flex-1 px-6 py-4 bg-[#ededed] rounded-full text-[20px] text-[#383838] placeholder-[#c0c0c0] focus:outline-none focus:ring-2 focus:ring-[#1b329a]" style="font-family: 'Inter', sans-serif;"
           />
-          <button class="w-full sm:w-auto bg-gradient-to-r from-[#728fbf] to-[#1b329a] text-white px-8 py-4 rounded-full text-[20px] font-normal hover:opacity-90 transition-opacity whitespace-nowrap cursor-pointer" style="font-family: 'Inter', sans-serif;">
+          <a href="/entrar" class="w-full sm:w-auto bg-gradient-to-r from-[#728fbf] to-[#1b329a] text-white px-8 py-4 rounded-full text-[20px] font-normal hover:opacity-90 transition-opacity whitespace-nowrap cursor-pointer text-center" style="font-family: 'Inter', sans-serif;">
             Entrar →
-          </button>
+          </a>
         </div>
 
         <p class="text-[#8c8787] text-base mt-8">
