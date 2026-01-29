@@ -88,9 +88,6 @@ const assets = {
     <meta property="og:url" content="https://clara.com.br/" />
     <meta property="og:title" content="Clara - Sua IA de Finanças Pessoais" />
     <meta property="og:description" content="Acompanhe gastos em tempo real, receba insights personalizados e economize automaticamente. Não deixe seu dinheiro falando sozinho." />
-    <meta property="og:image" content="https://clara.com.br/og-image.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="Clara" />
 
@@ -99,7 +96,6 @@ const assets = {
     <meta property="twitter:url" content="https://clara.com.br/" />
     <meta property="twitter:title" content="Clara - Sua IA de Finanças Pessoais" />
     <meta property="twitter:description" content="Acompanhe gastos em tempo real, receba insights personalizados e economize automaticamente." />
-    <meta property="twitter:image" content="https://clara.com.br/og-image.png" />
 
     <!-- Theme Color -->
     <meta name="theme-color" content="#1b329a" />
@@ -174,22 +170,20 @@ const assets = {
           <img src={assets.logo} alt="Clara" width="134" height="45" />
         </div>
         <!-- Liquid Glass Navigation Pill -->
-        <nav class="hidden md:flex items-center relative rounded-full overflow-hidden shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] transition-all duration-300 hover:shadow-[0_8px_40px_0_rgba(31,38,135,0.5)]" style="border: 1px solid rgba(255,255,255,0.1);">
-          <!-- Center blur layer (no distortion) -->
-          <div class="absolute inset-0 rounded-full pointer-events-none" style="background: rgba(0, 0, 0, 0.00); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);"></div>
-          <!-- Edge-only distortion layer -->
-          <div class="absolute inset-0 rounded-full pointer-events-none" style="background: transparent; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); filter: url(#liquid-glass-distortion); mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%); -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%);"></div>
+        <nav class="flex items-center relative rounded-full overflow-hidden shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]" style="border: 1px solid rgba(255,255,255,0.18);">
+          <!-- Glass blur layer -->
+          <div class="absolute inset-0 rounded-full pointer-events-none" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
 
-          <div class="relative z-10 flex items-center gap-4 px-6 py-3">
-            <a href="#como-funciona" class="text-white/50 hover:text-white/70 transition-colors text-[18px]" style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 300;">
+          <div class="relative z-10 flex items-center gap-2 sm:gap-4 px-4 sm:px-6 py-2 sm:py-3">
+            <a href="#como-funciona" class="text-white/50 hover:text-white/70 transition-colors text-sm sm:text-[18px]" style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 300;">
               Como funciona
             </a>
 
             <span class="text-white/30 text-lg">|</span>
 
-            <a href="#cta" class="flex items-center gap-2 text-[18px] hover:opacity-80 transition-opacity cursor-pointer" style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700;">
+            <a href="#cta" class="flex items-center gap-1 sm:gap-2 text-sm sm:text-[18px] hover:opacity-80 transition-opacity cursor-pointer" style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700;">
               <span class="bg-gradient-to-l from-white to-[#728fbf] bg-clip-text pointer-events-none" style="-webkit-text-fill-color: transparent;">Entrar</span>
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+              <svg class="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none">
                 <circle cx="12" cy="8" r="4" fill="url(#userGradient)" />
                 <path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="url(#userGradient)" stroke-width="2" stroke-linecap="round" />
                 <defs>
@@ -202,11 +196,6 @@ const assets = {
             </a>
           </div>
         </nav>
-        <button class="md:hidden text-white">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
       </header>
 
       <!-- Hero Content -->
@@ -223,7 +212,7 @@ const assets = {
           Identificamos automaticamente onde você pode economizar
         </p>
 
-        <a href="#" class="bg-white text-[#1b329a] px-10 py-4 rounded-full text-[24.891px] hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1" style="font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-weight: 400;">
+        <a href="#cta" class="bg-white text-[#1b329a] px-10 py-4 rounded-full text-[24.891px] hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1" style="font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-weight: 400;">
           Começar agora →
         </a>
 
@@ -242,11 +231,9 @@ const assets = {
         <!-- Feature Cards - Liquid Glass style -->
         <div class="flex flex-col md:flex-row gap-6 lg:gap-8 mt-4 px-4">
           <!-- Card 1: Tempo real -->
-          <div class="group relative w-full md:w-[320px] lg:w-[392px] h-[180px] lg:h-[206px] rounded-[34.632px] overflow-hidden shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] transition-all duration-300 hover:shadow-[0_8px_40px_0_rgba(31,38,135,0.5)] hover:scale-[1.02]" style="border: 1px solid rgba(255,255,255,0.1);">
-            <!-- Center blur layer (no distortion) -->
-            <div class="absolute inset-0 rounded-[34.632px]" style="background: rgba(0, 0, 0, 0.00); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);"></div>
-            <!-- Edge-only distortion layer -->
-            <div class="absolute inset-0 rounded-[34.632px] pointer-events-none" style="background: transparent; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); filter: url(#liquid-glass-distortion); mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%); -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%);"></div>
+          <div class="relative w-full md:w-[320px] lg:w-[392px] h-[180px] lg:h-[206px] rounded-[34.632px] overflow-hidden shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]" style="border: 1px solid rgba(255,255,255,0.18);">
+            <!-- Glass blur layer -->
+            <div class="absolute inset-0 rounded-[34.632px]" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
             <div class="relative flex flex-col items-center justify-center h-full text-center px-6 z-10">
               <!-- Lightning Icon -->
               <div class="relative w-10 h-10 mb-4">
@@ -261,33 +248,33 @@ const assets = {
           </div>
 
           <!-- Card 2: Insights avançados -->
-          <div class="group relative w-full md:w-[320px] lg:w-[392px] h-[180px] lg:h-[206px] rounded-[34.632px] overflow-hidden shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] transition-all duration-300 hover:shadow-[0_8px_40px_0_rgba(31,38,135,0.5)] hover:scale-[1.02]" style="border: 1px solid rgba(255,255,255,0.1);">
-            <!-- Center blur layer (no distortion) -->
-            <div class="absolute inset-0 rounded-[34.632px]" style="background: rgba(0, 0, 0, 0.00); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);"></div>
-            <!-- Edge-only distortion layer -->
-            <div class="absolute inset-0 rounded-[34.632px] pointer-events-none" style="background: transparent; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); filter: url(#liquid-glass-distortion); mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%); -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%);"></div>
+          <div class="relative w-full md:w-[320px] lg:w-[392px] h-[180px] lg:h-[206px] rounded-[34.632px] overflow-hidden shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]" style="border: 1px solid rgba(255,255,255,0.18);">
+            <!-- Glass blur layer -->
+            <div class="absolute inset-0 rounded-[34.632px]" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
             <div class="relative flex flex-col items-center justify-center h-full text-center px-6 z-10">
-              <!-- Share Icon -->
-              <div class="relative w-10 h-10 mb-4">
-                <img src={assets.iconShare1} alt="" class="absolute w-[6px] h-[6px] left-[15px] top-[2px]" />
-                <img src={assets.iconShare1} alt="" class="absolute w-[6px] h-[6px] left-[3px] top-[9px]" />
-                <img src={assets.iconShare1} alt="" class="absolute w-[6px] h-[6px] left-[15px] top-[17px]" />
-                <img src={assets.iconShare2} alt="" class="absolute w-[8px] h-[3px] left-[8px] top-[6px] rotate-[-45deg]" />
-                <img src={assets.iconShare3} alt="" class="absolute w-[9px] h-[3px] left-[8px] top-[14px] rotate-[-135deg]" />
+              <!-- IA Icon (share/nodes) -->
+              <div class="flex items-center justify-center">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                  <line x1="8.5" y1="10.5" x2="15.5" y2="6.5" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="8.5" y1="13.5" x2="15.5" y2="17.5" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="18" cy="5" r="3" fill="white"/>
+                  <circle cx="6" cy="12" r="3" fill="white"/>
+                  <circle cx="18" cy="19" r="3" fill="white"/>
+                </svg>
               </div>
-              <h3 class="text-white font-bold text-[20.202px] leading-[1.52] mb-2 drop-shadow-sm">Insights avançados</h3>
-              <p class="text-white font-light text-[14.43px] leading-[1.2] drop-shadow-sm">
-                Entende seus padrões e sugere melhorias<br/>personalizadas para você.
-              </p>
+              <div class="mt-8">
+                <h3 class="text-white font-bold text-[20.202px] leading-[1.52] mb-2 drop-shadow-sm">Insights avançados</h3>
+                <p class="text-white font-light text-[14.43px] leading-[1.2] drop-shadow-sm">
+                  Entende seus padrões e sugere melhorias<br/>personalizadas para você.
+                </p>
+              </div>
             </div>
           </div>
 
           <!-- Card 3: Sempre com você -->
-          <div class="group relative w-full md:w-[320px] lg:w-[392px] h-[180px] lg:h-[206px] rounded-[34.632px] overflow-hidden shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] transition-all duration-300 hover:shadow-[0_8px_40px_0_rgba(31,38,135,0.5)] hover:scale-[1.02]" style="border: 1px solid rgba(255,255,255,0.1);">
-            <!-- Center blur layer (no distortion) -->
-            <div class="absolute inset-0 rounded-[34.632px]" style="background: rgba(0, 0, 0, 0.00); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);"></div>
-            <!-- Edge-only distortion layer -->
-            <div class="absolute inset-0 rounded-[34.632px] pointer-events-none" style="background: transparent; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); filter: url(#liquid-glass-distortion); mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%); -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%);"></div>
+          <div class="relative w-full md:w-[320px] lg:w-[392px] h-[180px] lg:h-[206px] rounded-[34.632px] overflow-hidden shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]" style="border: 1px solid rgba(255,255,255,0.18);">
+            <!-- Glass blur layer -->
+            <div class="absolute inset-0 rounded-[34.632px]" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
             <div class="relative flex flex-col items-center justify-center h-full text-center px-6 z-10">
               <!-- Color Palette Icon -->
               <div class="relative w-10 h-10 mb-4">
@@ -434,13 +421,15 @@ const assets = {
 
                 <!-- Stats -->
                 <div class="grid grid-cols-2 gap-4">
-                  <div class="bg-[rgba(24,196,127,0.39)] rounded-[16px] h-[97px] flex flex-col items-center justify-center opacity-60">
-                    <p class="font-bold" style="color: #18C47F; font-variant-numeric: lining-nums tabular-nums; font-feature-settings: 'dlig' on; font-family: 'Inter', sans-serif; font-size: 31.707px; line-height: 1.4;">R$ 600</p>
-                    <p class="text-[14.275px]" style="color: rgba(255,255,255,0.38);">Economia/mês</p>
+                  <div class="relative rounded-[16px] h-[97px] flex flex-col items-center justify-center">
+                    <div class="absolute inset-0 rounded-[16px] bg-[rgba(24,196,127,0.39)] opacity-60"></div>
+                    <p class="relative z-10 font-bold" style="color: #18C47F; font-variant-numeric: lining-nums tabular-nums; font-feature-settings: 'dlig' on; font-family: 'Inter', sans-serif; font-size: 31.707px; line-height: 1.4;">R$ 600</p>
+                    <p class="relative z-10 text-[14.275px]" style="color: rgba(255,255,255,0.38);">Economia/mês</p>
                   </div>
-                  <div class="bg-[rgba(255,255,255,0.39)] rounded-[16px] h-[97px] flex flex-col items-center justify-center opacity-60">
-                    <p class="font-bold" style="color: white; font-variant-numeric: lining-nums tabular-nums; font-feature-settings: 'dlig' on; font-family: 'Inter', sans-serif; font-size: 31.707px; line-height: 1.4;">95%</p>
-                    <p class="text-[14.275px] text-white">Precisão</p>
+                  <div class="relative rounded-[16px] h-[97px] flex flex-col items-center justify-center">
+                    <div class="absolute inset-0 rounded-[16px] bg-[rgba(255,255,255,0.39)] opacity-60"></div>
+                    <p class="relative z-10 font-bold" style="color: white; font-variant-numeric: lining-nums tabular-nums; font-feature-settings: 'dlig' on; font-family: 'Inter', sans-serif; font-size: 31.707px; line-height: 1.4;">95%</p>
+                    <p class="relative z-10 text-[14.275px] text-white">Precisão</p>
                   </div>
                 </div>
               </div>
@@ -550,20 +539,20 @@ const assets = {
             <div class="text-[80px] lg:text-[120px] font-bold leading-none w-[50px] lg:w-[80px] text-center" style="font-family: 'Inter', sans-serif; color: rgba(255, 255, 255, 1);">
               1
             </div>
-            <div class="relative rounded-[24px] lg:rounded-[53px] overflow-hidden shadow-[0px_4.32px_31.97px_0px_rgba(0,0,0,0.25)] flex-1 h-[140px] lg:h-[236px] max-h-[140px] lg:max-h-[236px] -ml-6 lg:-ml-10" style="border: 1px solid rgba(255,255,255,0.25);">
+            <div class="relative rounded-[24px] lg:rounded-[53px] overflow-hidden shadow-[0px_4.32px_31.97px_0px_rgba(0,0,0,0.25)] flex-1 min-h-[140px] lg:h-[236px] -ml-8 lg:-ml-10" style="border: 1px solid rgba(255,255,255,0.25);">
               <div class="absolute inset-0 rounded-[24px] lg:rounded-[53px]" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
-              <div class="relative z-10 p-4 lg:p-6 flex flex-col justify-center h-full">
+              <div class="relative z-10 px-4 py-6 lg:p-6 flex flex-col justify-center lg:h-full">
                 <div class="flex items-center gap-3 mb-1">
-                  <svg class="w-8 h-8 lg:w-10 lg:h-10 shrink-0" viewBox="0 0 24 24" fill="none">
+                  <svg class="w-6 h-6 lg:w-10 lg:h-10 shrink-0" viewBox="0 0 24 24" fill="none">
                     <circle cx="18" cy="5" r="2.5" fill="white"/>
                     <circle cx="6" cy="12" r="2.5" fill="white"/>
                     <circle cx="18" cy="19" r="2.5" fill="white"/>
                     <line x1="8" y1="10.5" x2="16" y2="6" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
                     <line x1="8" y1="13.5" x2="16" y2="18" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
                   </svg>
-                  <h3 class="text-lg lg:text-2xl font-bold text-white whitespace-nowrap" style="font-family: 'Inter', sans-serif;">Conecte suas contas</h3>
+                  <h3 class="text-base lg:text-2xl font-bold text-white whitespace-nowrap" style="font-family: 'Inter', sans-serif;">Conecte suas contas</h3>
                 </div>
-                <p class="text-white/80 text-base lg:text-lg line-clamp-2 ml-11 lg:ml-13" style="font-family: 'Inter', sans-serif; font-weight: 300;">
+                <p class="text-white/80 text-sm lg:text-lg ml-9 lg:ml-13" style="font-family: 'Inter', sans-serif; font-weight: 300;">
                   Clara se conecta com seus bancos de forma segura. <span class="text-white">Leva menos de 2 minutos</span>
                 </p>
               </div>
@@ -575,17 +564,17 @@ const assets = {
             <div class="text-[80px] lg:text-[120px] font-bold leading-none w-[50px] lg:w-[80px] text-center shrink-0" style="font-family: 'Inter', sans-serif; color: rgba(255, 255, 255, 1);">
               2
             </div>
-            <div class="relative rounded-[24px] lg:rounded-[53px] overflow-hidden shadow-[0px_4.32px_31.97px_0px_rgba(0,0,0,0.25)] flex-1 h-[140px] lg:h-[236px] max-h-[140px] lg:max-h-[236px] -ml-6 lg:-ml-10" style="border: 1px solid rgba(255,255,255,0.25);">
+            <div class="relative rounded-[24px] lg:rounded-[53px] overflow-hidden shadow-[0px_4.32px_31.97px_0px_rgba(0,0,0,0.25)] flex-1 min-h-[140px] lg:h-[236px] -ml-8 lg:-ml-10" style="border: 1px solid rgba(255,255,255,0.25);">
               <div class="absolute inset-0 rounded-[24px] lg:rounded-[53px]" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
-              <div class="relative z-10 p-4 lg:p-6 flex flex-col justify-center h-full">
+              <div class="relative z-10 px-4 py-6 lg:p-6 flex flex-col justify-center lg:h-full">
                 <div class="flex items-center gap-3 mb-1">
-                  <div class="w-8 h-8 lg:w-10 lg:h-10 shrink-0 relative">
-                    <img src={assets.stepUserHead} alt="" class="absolute w-[14px] h-[14px] left-[11px] top-[2px]" />
-                    <img src={assets.stepUserBody} alt="" class="absolute w-[24px] h-[12px] left-[6px] top-[18px]" />
+                  <div class="w-6 h-6 lg:w-10 lg:h-10 shrink-0 relative">
+                    <img src={assets.stepUserHead} alt="" class="absolute w-[8px] h-[8px] left-[8px] top-[1px] lg:w-[14px] lg:h-[14px] lg:left-[11px] lg:top-[2px]" />
+                    <img src={assets.stepUserBody} alt="" class="absolute w-[14px] h-[7px] left-[4px] top-[11px] lg:w-[24px] lg:h-[12px] lg:left-[6px] lg:top-[18px]" />
                   </div>
-                  <h3 class="text-lg lg:text-2xl font-bold text-white whitespace-nowrap" style="font-family: 'Inter', sans-serif;">Viva normalmente</h3>
+                  <h3 class="text-base lg:text-2xl font-bold text-white whitespace-nowrap" style="font-family: 'Inter', sans-serif;">Viva normalmente</h3>
                 </div>
-                <p class="text-white/80 text-base lg:text-lg line-clamp-2 ml-11 lg:ml-13" style="font-family: 'Inter', sans-serif; font-weight: 300;">
+                <p class="text-white/80 text-sm lg:text-lg ml-9 lg:ml-13" style="font-family: 'Inter', sans-serif; font-weight: 300;">
                   Clara acompanha tudo em tempo real, <span class="text-white">sem você precisar fazer nada.</span>
                 </p>
               </div>
@@ -597,18 +586,18 @@ const assets = {
             <div class="text-[80px] lg:text-[120px] font-bold leading-none w-[50px] lg:w-[80px] text-center shrink-0" style="font-family: 'Inter', sans-serif; color: rgba(255, 255, 255, 1);">
               3
             </div>
-            <div class="relative rounded-[24px] lg:rounded-[53px] overflow-hidden shadow-[0px_4.32px_31.97px_0px_rgba(0,0,0,0.25)] flex-1 h-[140px] lg:h-[236px] max-h-[140px] lg:max-h-[236px] -ml-6 lg:-ml-10" style="border: 1px solid rgba(255,255,255,0.25);">
+            <div class="relative rounded-[24px] lg:rounded-[53px] overflow-hidden shadow-[0px_4.32px_31.97px_0px_rgba(0,0,0,0.25)] flex-1 min-h-[140px] lg:h-[236px] -ml-8 lg:-ml-10" style="border: 1px solid rgba(255,255,255,0.25);">
               <div class="absolute inset-0 rounded-[24px] lg:rounded-[53px]" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
-              <div class="relative z-10 p-4 lg:p-6 flex flex-col justify-center h-full">
+              <div class="relative z-10 px-4 py-6 lg:p-6 flex flex-col justify-center lg:h-full">
                 <div class="flex items-center gap-3 mb-1">
-                  <div class="w-8 h-8 lg:w-10 lg:h-10 shrink-0 relative">
-                    <img src={assets.stepChartBg} alt="" class="absolute w-[32px] h-[32px] left-[2px] top-[2px]" />
-                    <img src={assets.stepChartLine} alt="" class="absolute w-[14px] h-[8px] left-[10px] top-[14px]" />
-                    <img src={assets.stepChartDot} alt="" class="absolute w-[6px] h-[6px] left-[28px] top-[4px]" />
+                  <div class="w-6 h-6 lg:w-10 lg:h-10 shrink-0 relative">
+                    <img src={assets.stepChartBg} alt="" class="absolute w-[20px] h-[20px] left-[1px] top-[1px] lg:w-[32px] lg:h-[32px] lg:left-[2px] lg:top-[2px]" />
+                    <img src={assets.stepChartLine} alt="" class="absolute w-[9px] h-[5px] left-[6px] top-[9px] lg:w-[14px] lg:h-[8px] lg:left-[10px] lg:top-[14px]" />
+                    <img src={assets.stepChartDot} alt="" class="absolute w-[4px] h-[4px] left-[17px] top-[3px] lg:w-[6px] lg:h-[6px] lg:left-[28px] lg:top-[4px]" />
                   </div>
-                  <h3 class="text-lg lg:text-2xl font-bold text-white whitespace-nowrap" style="font-family: 'Inter', sans-serif;">Receba insights</h3>
+                  <h3 class="text-base lg:text-2xl font-bold text-white whitespace-nowrap" style="font-family: 'Inter', sans-serif;">Receba insights</h3>
                 </div>
-                <p class="text-white/80 text-base lg:text-lg line-clamp-2 ml-11 lg:ml-13" style="font-family: 'Inter', sans-serif; font-weight: 300;">
+                <p class="text-white/80 text-sm lg:text-lg ml-9 lg:ml-13" style="font-family: 'Inter', sans-serif; font-weight: 300;">
                   Alertas inteligentes quando algo precisar de sua atenção.
                 </p>
               </div>
@@ -620,18 +609,18 @@ const assets = {
             <div class="text-[80px] lg:text-[120px] font-bold leading-none w-[50px] lg:w-[80px] text-center shrink-0" style="font-family: 'Inter', sans-serif; color: rgba(255, 255, 255, 1);">
               4
             </div>
-            <div class="relative rounded-[24px] lg:rounded-[53px] overflow-hidden shadow-[0px_4.32px_31.97px_0px_rgba(0,0,0,0.25)] flex-1 h-[140px] lg:h-[236px] max-h-[140px] lg:max-h-[236px] -ml-6 lg:-ml-10" style="border: 1px solid rgba(255,255,255,0.25);">
+            <div class="relative rounded-[24px] lg:rounded-[53px] overflow-hidden shadow-[0px_4.32px_31.97px_0px_rgba(0,0,0,0.25)] flex-1 min-h-[140px] lg:h-[236px] -ml-8 lg:-ml-10" style="border: 1px solid rgba(255,255,255,0.25);">
               <div class="absolute inset-0 rounded-[24px] lg:rounded-[53px]" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
-              <div class="relative z-10 p-4 lg:p-6 flex flex-col justify-center h-full">
+              <div class="relative z-10 px-4 py-6 lg:p-6 flex flex-col justify-center lg:h-full">
                 <div class="flex items-center gap-3 mb-1">
-                  <div class="w-8 h-8 lg:w-10 lg:h-10 shrink-0 relative">
-                    <img src={assets.stepPaletteLeft} alt="" class="absolute w-[16px] h-[32px] left-[2px] top-[2px]" />
-                    <img src={assets.stepPaletteTopRight} alt="" class="absolute w-[12px] h-[20px] left-[20px] top-[4px]" />
-                    <img src={assets.stepPaletteBottomRight} alt="" class="absolute w-[14px] h-[16px] left-[20px] top-[18px]" />
+                  <div class="w-6 h-6 lg:w-10 lg:h-10 shrink-0 relative">
+                    <img src={assets.stepPaletteLeft} alt="" class="absolute w-[10px] h-[19px] left-[1px] top-[1px] lg:w-[16px] lg:h-[32px] lg:left-[2px] lg:top-[2px]" />
+                    <img src={assets.stepPaletteTopRight} alt="" class="absolute w-[7px] h-[12px] left-[12px] top-[2px] lg:w-[12px] lg:h-[20px] lg:left-[20px] lg:top-[4px]" />
+                    <img src={assets.stepPaletteBottomRight} alt="" class="absolute w-[8px] h-[10px] left-[12px] top-[11px] lg:w-[14px] lg:h-[16px] lg:left-[20px] lg:top-[18px]" />
                   </div>
-                  <h3 class="text-lg lg:text-2xl font-bold text-white whitespace-nowrap" style="font-family: 'Inter', sans-serif;">Mais controle na palma da mão</h3>
+                  <h3 class="text-base lg:text-2xl font-bold text-white whitespace-nowrap" style="font-family: 'Inter', sans-serif;">Mais controle na palma da mão</h3>
                 </div>
-                <p class="text-white/80 text-base lg:text-lg line-clamp-2 ml-11 lg:ml-13" style="font-family: 'Inter', sans-serif; font-weight: 300;">
+                <p class="text-white/80 text-sm lg:text-lg ml-9 lg:ml-13" style="font-family: 'Inter', sans-serif; font-weight: 300;">
                   Clara descomplica suas finanças e te ajuda a viver <span class="text-white">mais tranquilo e preparado!</span>
                 </p>
               </div>
@@ -641,9 +630,8 @@ const assets = {
 
         <!-- CTA Button -->
         <div class="flex justify-center mt-16">
-          <a href="#cta" class="relative rounded-full overflow-hidden px-10 py-4 text-lg font-medium text-white transition-all hover:scale-105 cursor-pointer" style="border: 1px solid rgba(255,255,255,0.25);">
-            <div class="absolute inset-0" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
-            <span class="relative z-10">Fale com a Clara →</span>
+          <a href="#cta" class="bg-white rounded-[128.571px] px-10 py-3 text-[25.849px] text-[#1b329a] text-center cursor-pointer hover:opacity-90" style="font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-weight: 400;">
+            Fale com a Clara →
           </a>
         </div>
       </div>
@@ -662,7 +650,7 @@ const assets = {
       </div>
 
       <!-- Alert Card -->
-      <div class="absolute left-2 lg:left-6 xl:left-16 top-[10%] lg:top-1/4">
+      <div class="absolute left-2 lg:left-6 xl:left-16 top-1/2 -translate-y-1/2 lg:translate-y-0 lg:top-1/4">
         <div class="relative rounded-[20px] lg:rounded-[28px] overflow-hidden p-3 lg:p-5 max-w-[260px] lg:max-w-[420px]" style="border: 1px solid rgba(255,255,255,0.25);">
           <!-- Center blur layer -->
           <div class="absolute inset-0 rounded-[20px] lg:rounded-[28px]" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
@@ -710,7 +698,7 @@ const assets = {
             placeholder="seu@email.com"
             class="w-full sm:flex-1 px-6 py-4 bg-[#ededed] rounded-full text-[20px] text-[#383838] placeholder-[#c0c0c0] focus:outline-none focus:ring-2 focus:ring-[#1b329a]" style="font-family: 'Inter', sans-serif;"
           />
-          <a href="/entrar" class="w-full sm:w-auto bg-gradient-to-r from-[#728fbf] to-[#1b329a] text-white px-8 py-4 rounded-full text-[20px] font-normal hover:opacity-90 transition-opacity whitespace-nowrap cursor-pointer text-center" style="font-family: 'Inter', sans-serif;">
+          <a href="#" class="w-full sm:w-auto bg-gradient-to-r from-[#728fbf] to-[#1b329a] text-white px-8 py-4 rounded-full text-[20px] font-normal hover:opacity-90 transition-opacity whitespace-nowrap cursor-pointer text-center" style="font-family: 'Inter', sans-serif;">
             Entrar →
           </a>
         </div>
