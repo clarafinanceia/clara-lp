@@ -639,6 +639,22 @@ const currentYear = new Date().getFullYear();
 
     <!-- Lazy-load second video via IntersectionObserver -->
     <script>
+      function tryPlayLazy(v: HTMLVideoElement) {
+        v.muted = true;
+        const p = v.play();
+        if (p !== undefined) {
+          p.catch(() => {
+            const resume = () => {
+              v.play();
+              document.removeEventListener('touchstart', resume);
+              document.removeEventListener('click', resume);
+            };
+            document.addEventListener('touchstart', resume, { once: true });
+            document.addEventListener('click', resume, { once: true });
+          });
+        }
+      }
+
       const video = document.getElementById('como-funciona-video') as HTMLVideoElement | null;
       if (video) {
         const observer = new IntersectionObserver((entries) => {
@@ -649,7 +665,7 @@ const currentYear = new Date().getFullYear();
                 source.src = source.dataset.src;
                 source.removeAttribute('data-src');
                 video.load();
-                video.play();
+                tryPlayLazy(video);
               }
               observer.unobserve(video);
             }
