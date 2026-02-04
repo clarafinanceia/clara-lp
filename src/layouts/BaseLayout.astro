@@ -6,6 +6,7 @@ interface Props {
 }
 
 const { title, description, noindex = false } = Astro.props;
+import '../styles/global.css';
 const currentYear = new Date().getFullYear();
 ---
 
@@ -43,8 +44,6 @@ const currentYear = new Date().getFullYear();
     <noscript>
       <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Inter:wght@200;300;400;600;700&display=swap" rel="stylesheet" />
     </noscript>
-
-    <link rel="stylesheet" href="/src/styles/global.css" />
 
     <slot name="head" />
   </head>
