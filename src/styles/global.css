@@ -11,14 +11,45 @@
   --color-gray-light: #8c8787;
   --color-gray-lighter: #c0c0c0;
   --color-dark: #383838;
-}
-
-html {
-  scroll-behavior: smooth;
+  --color-primary-dark: #0b1958;
+  --color-check: #2B3F6C;
+  --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
 body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-subtle {
+  background: transparent;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.glass-success {
+  background: rgba(24, 196, 127, 0.39);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-border-light {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glass-border {
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
