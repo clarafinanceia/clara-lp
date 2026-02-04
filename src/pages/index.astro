@@ -105,6 +105,7 @@ const currentYear = new Date().getFullYear();
       <!-- Video Background -->
       <div class="absolute inset-0 w-full h-full">
         <video
+          id="hero-video"
           autoplay
           loop
           muted
@@ -613,6 +614,28 @@ const currentYear = new Date().getFullYear();
         <p class="text-gray-light text-base">{currentYear} &copy; Clara</p>
       </div>
     </footer>
+
+    <!-- Force autoplay for hero video (mobile browser policy fallback) -->
+    <script>
+      function tryPlayVideo(video: HTMLVideoElement) {
+        video.muted = true;
+        const p = video.play();
+        if (p !== undefined) {
+          p.catch(() => {
+            const resume = () => {
+              video.play();
+              document.removeEventListener('touchstart', resume);
+              document.removeEventListener('click', resume);
+            };
+            document.addEventListener('touchstart', resume, { once: true });
+            document.addEventListener('click', resume, { once: true });
+          });
+        }
+      }
+
+      const heroVideo = document.getElementById('hero-video') as HTMLVideoElement | null;
+      if (heroVideo) tryPlayVideo(heroVideo);
+    </script>
 
     <!-- Lazy-load second video via IntersectionObserver -->
     <script>
