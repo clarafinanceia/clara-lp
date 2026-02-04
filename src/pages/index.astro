@@ -1,67 +1,12 @@
 ---
-// Assets do Figma
-const assets = {
-  heroImage: "https://www.figma.com/api/mcp/asset/756f27b8-6869-4d64-9d11-2df66ce74ebf",
-  logo: "https://www.figma.com/api/mcp/asset/082c0af1-927f-4516-8a88-6aac57e4fb52",
-  logoWhite: "https://www.figma.com/api/mcp/asset/ff69b0e3-c65e-494a-93ad-77a5b6cad003",
-  glassLayer1: "https://www.figma.com/api/mcp/asset/0bfa9fcd-61f4-40f7-93fb-c28934d4002c",
-  glassLayer2: "https://www.figma.com/api/mcp/asset/9fff9624-ec7b-4e03-90cb-02bc35a671c4",
-  dots: "https://www.figma.com/api/mcp/asset/6e13f010-4f17-4bf3-a4f2-5f6f61b32835",
-  iconGastoReal: "https://www.figma.com/api/mcp/asset/0ab38a25-3e8e-499e-9070-464bf5cb6bdf",
-  iconInsights: "https://www.figma.com/api/mcp/asset/5f9ee730-3ed5-4b76-871f-f11f13f949ae",
-  iconEconomia: "https://www.figma.com/api/mcp/asset/2138767d-ff25-4e82-b4c8-7659e36ecd3d",
-  cardAnalise: "https://www.figma.com/api/mcp/asset/68fc77ea-9350-4d5b-9510-1816c8fb9cb3",
-  iconReducao: "https://www.figma.com/api/mcp/asset/06951866-3275-45ad-ad52-82cd0b2688f0",
-  iconCaptura: "https://www.figma.com/api/mcp/asset/6db7c49b-0ec4-44c9-b711-ab4cd2aa95c8",
-  iconAlertas: "https://www.figma.com/api/mcp/asset/68a46a80-8ce9-4bc8-b480-b05587c1d87f",
-  iconMetas: "https://www.figma.com/api/mcp/asset/aed2d8bb-f6bf-4905-be07-9afadc0585d9",
-  step1: "https://www.figma.com/api/mcp/asset/db9f2987-7919-47b8-90ca-aace38650990",
-  step2: "https://www.figma.com/api/mcp/asset/01b74420-cb5d-451a-8071-528d41cc8515",
-  step3: "https://www.figma.com/api/mcp/asset/a6267737-d731-4ad4-89e0-6d3024e79a06",
-  step4: "https://www.figma.com/api/mcp/asset/93d08082-9faf-4892-8dbe-ade5c41664ab",
-  // Hero card icons
-  iconLightning1: "https://www.figma.com/api/mcp/asset/6649b8ce-7fef-44b3-9ce1-0e5c35e6cf03",
-  iconLightning2: "https://www.figma.com/api/mcp/asset/2c25c45f-db0f-4b1c-91e5-9f1061b8393c",
-  iconShare1: "https://www.figma.com/api/mcp/asset/e78b3c4d-81e7-43bc-a335-a3d7c6854532",
-  iconShare2: "https://www.figma.com/api/mcp/asset/20a7e421-4716-4c57-85c8-ecaf3aca001c",
-  iconShare3: "https://www.figma.com/api/mcp/asset/c0fdefbe-0a89-4ae0-b43d-ea552acfa9d3",
-  iconPalette1: "https://www.figma.com/api/mcp/asset/b2e0e8e3-1609-4606-a83a-a5f6e3e0f8ab",
-  iconPalette2: "https://www.figma.com/api/mcp/asset/3ed48625-c062-46ef-ab75-372872dc26ea",
-  iconPalette3: "https://www.figma.com/api/mcp/asset/b7772925-bbf5-46e7-89da-81f53c8f2d2d",
-  // Benefit card icons
-  iconWallet1: "https://www.figma.com/api/mcp/asset/6224dc74-643d-46f2-91d0-f271c328a64d",
-  iconWallet2: "https://www.figma.com/api/mcp/asset/0b97c399-9ece-4737-8422-24485ae350be",
-  iconWallet3: "https://www.figma.com/api/mcp/asset/09aa42bb-90b4-4b87-b285-5f89f83b7901",
-  iconBell1: "https://www.figma.com/api/mcp/asset/0f307e82-b71b-41a5-a827-706dc28e1088",
-  iconBell2: "https://www.figma.com/api/mcp/asset/cda6d7ee-4489-42bf-bee7-379a4bcea4b4",
-  iconRocket1: "https://www.figma.com/api/mcp/asset/2f6b71d3-7ba2-47bb-89b5-38ef1bb05143",
-  iconRocket2: "https://www.figma.com/api/mcp/asset/9e7d8601-5a17-4d94-84b8-c3fc53cdb72e",
-  iconRocket3: "https://www.figma.com/api/mcp/asset/dad3dd76-73f6-4ccd-84bc-d2ec000b18e1",
-  // Benefits card Lightning icon (colored version)
-  iconLightningBenefits1: "https://www.figma.com/api/mcp/asset/b58a1505-a638-4842-a71d-0e74e918d986",
-  iconLightningBenefits2: "https://www.figma.com/api/mcp/asset/d2a701b3-b35c-45d8-8e61-b47e04f97e5b",
-  // How it works section icons (from Figma)
-  // Step 1 - Share icon
-  stepShareCircle: "https://www.figma.com/api/mcp/asset/bfb45121-8639-45ae-8ba4-5e21852b7e2d",
-  stepShareLine1: "https://www.figma.com/api/mcp/asset/62b24edb-7e91-48f9-a212-1ee39f5dfdda",
-  stepShareLine2: "https://www.figma.com/api/mcp/asset/db474f63-ef85-4578-b3f6-8b0f2ea9830c",
-  // Step 2 - User icon
-  stepUserHead: "https://www.figma.com/api/mcp/asset/2cb6a168-2cf5-4571-b81b-796f7d28786a",
-  stepUserBody: "https://www.figma.com/api/mcp/asset/96126cb6-9cc4-40e9-8f0c-5afa28ef4438",
-  // Step 3 - Chart icon
-  stepChartBg: "https://www.figma.com/api/mcp/asset/06bc6880-0094-40fe-a4a0-a6ca3b799bed",
-  stepChartLine: "https://www.figma.com/api/mcp/asset/95efd7bc-ae9b-44d5-88a8-0d8244fbcdc7",
-  stepChartDot: "https://www.figma.com/api/mcp/asset/741889b5-96f3-4d79-b2d8-fa471ab3ccae",
-  // Step 4 - Palette icon
-  stepPaletteLeft: "https://www.figma.com/api/mcp/asset/3651637a-9440-4d99-bf0b-8d8ad75d9848",
-  stepPaletteTopRight: "https://www.figma.com/api/mcp/asset/aa4d67a9-1577-4dc9-8b5e-4d335bf0f2bf",
-  stepPaletteBottomRight: "https://www.figma.com/api/mcp/asset/f3cbf6e1-855b-46e4-aca1-bd574c605705",
-  // Hero image section
-  heroImagePerson: "https://www.figma.com/api/mcp/asset/9e589693-da86-449c-b59b-746e73552287",
-  alertLogo: "https://www.figma.com/api/mcp/asset/7f3408a4-1740-4dc1-897f-115d5c2cee08",
-  logoBlue: "https://www.figma.com/api/mcp/asset/78b4e783-dc9e-4807-ac28-e607b0f1c53c",
-};
+import IconShare from '../components/IconShare.astro';
+import IconCheck from '../components/IconCheck.astro';
+import IconLightning from '../components/IconLightning.astro';
+import IconCard from '../components/IconCard.astro';
+import IconBell from '../components/IconBell.astro';
+import IconRocket from '../components/IconRocket.astro';
 
+const currentYear = new Date().getFullYear();
 ---
 
 <html lang="pt-BR" class="scroll-smooth">
@@ -90,12 +35,16 @@ const assets = {
     <meta property="og:description" content="Acompanhe gastos em tempo real, receba insights personalizados e economize automaticamente. Não deixe seu dinheiro falando sozinho." />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="Clara" />
+    <meta property="og:image" content="https://clara.com.br/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://clara.com.br/" />
     <meta property="twitter:title" content="Clara - Sua IA de Finanças Pessoais" />
     <meta property="twitter:description" content="Acompanhe gastos em tempo real, receba insights personalizados e economize automaticamente." />
+    <meta property="twitter:image" content="https://clara.com.br/og-image.png" />
 
     <!-- Theme Color -->
     <meta name="theme-color" content="#1b329a" />
@@ -104,10 +53,18 @@ const assets = {
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json" />
 
-    <!-- Google Fonts - Preconnect for performance -->
+    <!-- Google Fonts - Non-blocking -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Inter:wght@200;300;400;600;700&display=swap"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Inter:wght@200;300;400;600;700&display=swap" rel="stylesheet" />
+    </noscript>
 
     <link rel="stylesheet" href="/src/styles/global.css" />
 
@@ -118,17 +75,12 @@ const assets = {
       "@type": "SoftwareApplication",
       "name": "Clara",
       "applicationCategory": "FinanceApplication",
-      "operatingSystem": "Web, iOS, Android",
+      "operatingSystem": "Web",
       "description": "Clara é sua assistente de IA para finanças pessoais. Acompanhe gastos em tempo real, receba insights personalizados e economize automaticamente.",
       "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "BRL"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "1000"
       },
       "author": {
         "@type": "Organization",
@@ -138,8 +90,8 @@ const assets = {
     }
     </script>
 
-    <!-- SVG Filter for Liquid Glass distortion effect - exaggerated at edges -->
-    <svg class="hidden" width="0" height="0">
+    <!-- SVG Filter for Liquid Glass distortion effect -->
+    <svg class="hidden" width="0" height="0" aria-hidden="true">
       <defs>
         <filter id="liquid-glass-distortion" x="-50%" y="-50%" width="200%" height="200%">
           <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" result="noise" seed="3" />
@@ -153,11 +105,13 @@ const assets = {
     <section class="relative min-h-screen overflow-hidden">
       <!-- Video Background -->
       <div class="absolute inset-0 w-full h-full">
-          <video
+        <video
           autoplay
           loop
           muted
           playsinline
+          preload="auto"
+          poster="/images/video-poster.jpg"
           class="w-full h-full object-cover"
         >
           <source src="/images/header_animado.mp4" type="video/mp4" />
@@ -167,23 +121,23 @@ const assets = {
       <!-- Header -->
       <header class="relative z-50 flex items-center justify-between px-4 lg:px-12 py-6">
         <div class="flex items-center shrink-0">
-          <img src={assets.logo} alt="Clara" width="134" height="45" />
+          <img src="/images/logo.svg" alt="Clara" width="134" height="45" />
         </div>
         <!-- Liquid Glass Navigation Pill -->
-        <nav class="flex items-center relative rounded-full overflow-hidden shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]" style="border: 1px solid rgba(255,255,255,0.18);">
+        <nav class="flex items-center relative rounded-full overflow-hidden shadow-glass glass-border-light">
           <!-- Glass blur layer -->
-          <div class="absolute inset-0 rounded-full pointer-events-none" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
+          <div class="absolute inset-0 rounded-full pointer-events-none glass-light"></div>
 
           <div class="relative z-10 flex items-center gap-2 sm:gap-4 px-4 sm:px-6 py-2 sm:py-3">
-            <a href="#como-funciona" class="text-white/50 hover:text-white/70 transition-colors text-sm sm:text-[18px]" style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 300;">
+            <a href="#como-funciona" class="text-white/50 hover:text-white/70 transition-colors text-sm sm:text-[18px] font-light">
               Como funciona
             </a>
 
             <span class="text-white/30 text-lg">|</span>
 
-            <a href="#cta" class="flex items-center gap-1 sm:gap-2 text-sm sm:text-[18px] hover:opacity-80 transition-opacity cursor-pointer" style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700;">
-              <span class="bg-gradient-to-l from-white to-[#728fbf] bg-clip-text pointer-events-none" style="-webkit-text-fill-color: transparent;">Entrar</span>
-              <svg class="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none">
+            <a href="#cta" class="flex items-center gap-1 sm:gap-2 text-sm sm:text-[18px] hover:opacity-80 transition-opacity cursor-pointer font-bold">
+              <span class="bg-gradient-to-l from-white to-primary-lighter bg-clip-text pointer-events-none" style="-webkit-text-fill-color: transparent;">Entrar</span>
+              <svg class="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <circle cx="12" cy="8" r="4" fill="url(#userGradient)" />
                 <path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="url(#userGradient)" stroke-width="2" stroke-linecap="round" />
                 <defs>
@@ -200,71 +154,56 @@ const assets = {
 
       <!-- Hero Content -->
       <div class="relative z-10 flex flex-col items-center justify-center text-center px-6 pt-16 lg:pt-24 pb-32">
-        <h1 class="text-4xl lg:text-[68.06px] text-white leading-[1.1] mb-32" style="font-family: 'Hubot Sans', 'Inter', sans-serif; font-weight: 300;">
-          Não deixe <span style="font-weight: 700;">seu dinheiro</span><br />
+        <h1 class="text-4xl lg:text-[68px] text-white leading-[1.1] mb-32 font-hubot font-light">
+          Não deixe <span class="font-bold">seu dinheiro</span><br />
           falando sozinho
         </h1>
 
         <div class="mb-6">
-          <h2 class="text-2xl lg:text-[35.372px] text-white leading-[1.1]" style="font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-weight: 700;">Captura de economias</h2>
+          <h2 class="text-2xl lg:text-[35px] text-white leading-[1.1] font-bold">Captura de economias</h2>
         </div>
-        <p class="text-white text-lg lg:text-[24.488px] mb-8 max-w-xl leading-[1.1]" style="font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-weight: 200;">
+        <p class="text-white text-lg lg:text-[25px] mb-8 max-w-xl leading-[1.1] font-extralight">
           Identificamos automaticamente onde você pode economizar
         </p>
 
-        <a href="#cta" class="bg-white text-[#1b329a] px-10 py-4 rounded-full text-[24.891px] hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1" style="font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-weight: 400;">
+        <a href="#cta" class="bg-white text-primary px-10 py-4 rounded-full text-[25px] hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
           Começar agora →
         </a>
 
-        <!-- Dots indicator -->
-        <div class="flex gap-2 mt-8">
-          <span class="w-3 h-3 bg-white rounded-full"></span>
-          <span class="w-3 h-3 bg-white/40 rounded-full"></span>
-          <span class="w-3 h-3 bg-white/40 rounded-full"></span>
-        </div>
-
         <!-- Subtitle -->
-        <p class="text-white text-xl lg:text-[24.488px] mt-16 mb-8" style="font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-weight: 700;">
+        <p class="text-white text-xl lg:text-[25px] mt-16 mb-8 font-bold">
           Confira as vantagens de ter a Clara com você:
         </p>
 
         <!-- Feature Cards - Liquid Glass style -->
         <div class="flex flex-col md:flex-row gap-6 lg:gap-8 mt-4 px-4">
           <!-- Card 1: Tempo real -->
-          <div class="relative w-full md:w-[320px] lg:w-[392px] h-[180px] lg:h-[206px] rounded-[34.632px] overflow-hidden shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]" style="border: 1px solid rgba(255,255,255,0.18);">
-            <!-- Glass blur layer -->
-            <div class="absolute inset-0 rounded-[34.632px]" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
+          <div class="relative w-full md:w-[320px] lg:w-[392px] h-[180px] lg:h-[206px] rounded-[35px] overflow-hidden shadow-glass glass-border-light">
+            <div class="absolute inset-0 rounded-[35px] glass-light"></div>
             <div class="relative flex flex-col items-center justify-center h-full text-center px-6 z-10">
               <!-- Lightning Icon -->
-              <div class="relative w-10 h-10 mb-4">
-                <img src={assets.iconLightning1} alt="" class="absolute w-[10px] h-[13px] left-[10px] top-[10px]" />
-                <img src={assets.iconLightning2} alt="" class="absolute w-[10px] h-[13px] left-[5px] top-[2px]" />
+              <div class="flex items-center justify-center mb-4">
+                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" fill="white" opacity="0.9"/>
+                </svg>
               </div>
-              <h3 class="text-white font-bold text-[20.202px] leading-[1.52] mb-2 drop-shadow-sm">Tempo real</h3>
-              <p class="text-white font-light text-[14.43px] leading-[1.2] drop-shadow-sm">
+              <h3 class="text-white font-bold text-[20px] leading-[1.52] mb-2 drop-shadow-sm">Tempo real</h3>
+              <p class="text-white font-light text-[14px] leading-[1.2] drop-shadow-sm">
                 Acompanha cada transação automaticamente.<br/>Você não precisa fazer nada
               </p>
             </div>
           </div>
 
           <!-- Card 2: Insights avançados -->
-          <div class="relative w-full md:w-[320px] lg:w-[392px] h-[180px] lg:h-[206px] rounded-[34.632px] overflow-hidden shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]" style="border: 1px solid rgba(255,255,255,0.18);">
-            <!-- Glass blur layer -->
-            <div class="absolute inset-0 rounded-[34.632px]" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
+          <div class="relative w-full md:w-[320px] lg:w-[392px] h-[180px] lg:h-[206px] rounded-[35px] overflow-hidden shadow-glass glass-border-light">
+            <div class="absolute inset-0 rounded-[35px] glass-light"></div>
             <div class="relative flex flex-col items-center justify-center h-full text-center px-6 z-10">
-              <!-- IA Icon (share/nodes) -->
               <div class="flex items-center justify-center">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
-                  <line x1="8.5" y1="10.5" x2="15.5" y2="6.5" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
-                  <line x1="8.5" y1="13.5" x2="15.5" y2="17.5" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
-                  <circle cx="18" cy="5" r="3" fill="white"/>
-                  <circle cx="6" cy="12" r="3" fill="white"/>
-                  <circle cx="18" cy="19" r="3" fill="white"/>
-                </svg>
+                <IconShare />
               </div>
               <div class="mt-8">
-                <h3 class="text-white font-bold text-[20.202px] leading-[1.52] mb-2 drop-shadow-sm">Insights avançados</h3>
-                <p class="text-white font-light text-[14.43px] leading-[1.2] drop-shadow-sm">
+                <h3 class="text-white font-bold text-[20px] leading-[1.52] mb-2 drop-shadow-sm">Insights avançados</h3>
+                <p class="text-white font-light text-[14px] leading-[1.2] drop-shadow-sm">
                   Entende seus padrões e sugere melhorias<br/>personalizadas para você.
                 </p>
               </div>
@@ -272,18 +211,20 @@ const assets = {
           </div>
 
           <!-- Card 3: Sempre com você -->
-          <div class="relative w-full md:w-[320px] lg:w-[392px] h-[180px] lg:h-[206px] rounded-[34.632px] overflow-hidden shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]" style="border: 1px solid rgba(255,255,255,0.18);">
-            <!-- Glass blur layer -->
-            <div class="absolute inset-0 rounded-[34.632px]" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
+          <div class="relative w-full md:w-[320px] lg:w-[392px] h-[180px] lg:h-[206px] rounded-[35px] overflow-hidden shadow-[0px_3px_21px_0px_rgba(0,0,0,0.25)] glass-border-light">
+            <div class="absolute inset-0 rounded-[35px] glass-light"></div>
+            <div class="absolute inset-0 rounded-[35px] pointer-events-none" style="backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); filter: url(#liquid-glass-distortion); mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%); -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%);"></div>
             <div class="relative flex flex-col items-center justify-center h-full text-center px-6 z-10">
-              <!-- Color Palette Icon -->
-              <div class="relative w-10 h-10 mb-4">
-                <img src={assets.iconPalette1} alt="" class="absolute w-[10px] h-[20px] left-[2px] top-[2px]" />
-                <img src={assets.iconPalette2} alt="" class="absolute w-[8px] h-[14px] left-[14px] top-[3px]" />
-                <img src={assets.iconPalette3} alt="" class="absolute w-[9px] h-[10px] left-[14px] top-[13px]" />
+              <!-- Color Palette Icon (Two Tone) -->
+              <div class="flex items-center justify-center mb-4">
+                <svg class="w-9 h-9" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                  <path d="M13.5 3C15.9853 3 18 5.01472 18 7.5V28.5C18 30.9853 15.9853 33 13.5 33H7.5C5.01472 33 3 30.9853 3 28.5V7.5C3 5.01472 5.01472 3 7.5 3H13.5ZM10.5 25.5C9.67157 25.5 9 26.1716 9 27C9 27.8284 9.67157 28.5 10.5 28.5C11.3284 28.5 12 27.8284 12 27C12 26.1716 11.3284 25.5 10.5 25.5Z" fill="white"/>
+                  <path opacity="0.3" d="M20.25 25.4886C20.25 25.9938 20.8362 26.2728 21.2283 25.9543L30.052 18.7867C31.8498 17.0366 31.8691 14.1544 30.0951 12.3803L25.8328 8.11802C24.7323 7.01746 23.2009 6.60471 21.7772 6.88513C20.7676 7.08399 20.25 8.11688 20.25 9.14592V25.4886Z" fill="white"/>
+                  <path opacity="0.3" d="M20.8042 24.1942C20.4536 24.479 20.25 24.9067 20.25 25.3585V28.4958C20.25 29.3242 20.9216 29.9958 21.75 29.9958H28.5C30.9853 29.9958 33 27.9811 33 25.4958V18.2997C33 17.1332 32.3955 16.1079 31.4826 15.52L20.8042 24.1942Z" fill="white"/>
+                </svg>
               </div>
-              <h3 class="text-white font-bold text-[20.202px] leading-[1.52] mb-2 drop-shadow-sm">Sempre com você</h3>
-              <p class="text-white font-light text-[14.43px] leading-[1.2] drop-shadow-sm">
+              <h3 class="text-white font-bold text-[20px] leading-[1.52] mb-2 drop-shadow-sm">Sempre com você</h3>
+              <p class="text-white font-light text-[14px] leading-[1.2] drop-shadow-sm">
                 No app ou por mensagem. Clara está onde<br/>você precisa!
               </p>
             </div>
@@ -293,93 +234,73 @@ const assets = {
     </section>
 
     <!-- AI Section -->
-    <section class="bg-white py-20 lg:py-32 px-6 rounded-t-[30px] lg:rounded-t-[60px] rounded-b-[30px] lg:rounded-b-[60px] -mt-12 relative z-20" style="font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;">
+    <section class="bg-white py-20 lg:py-32 px-6 rounded-t-[30px] lg:rounded-t-[60px] rounded-b-[30px] lg:rounded-b-[60px] -mt-12 relative z-20">
       <div class="max-w-7xl mx-auto">
         <!-- Badge -->
         <div class="flex justify-center mb-8">
-          <span class="bg-gradient-to-r from-[#1b329a] to-[#728fbf] text-white px-12 py-1 rounded-full text-base font-light" style="font-family: 'Hubot Sans', 'Inter', sans-serif;">
+          <span class="bg-gradient-to-r from-primary to-primary-lighter text-white px-12 py-1 rounded-full text-base font-light font-hubot">
             Inteligência Artificial
           </span>
         </div>
 
         <!-- Title -->
         <h2 class="text-3xl lg:text-5xl text-center font-bold mb-4">
-          <span class="text-[#383838]">A IA que </span><span class="bg-gradient-to-r from-[#1b329a] to-[#728fbf] bg-clip-text text-transparent" style="-webkit-text-fill-color: transparent;">entende você</span><br />
-          <span class="text-[#383838]">e </span><span class="bg-gradient-to-r from-[#1b329a] to-[#728fbf] bg-clip-text text-transparent" style="-webkit-text-fill-color: transparent;">entende seu bolso!</span>
+          <span class="text-dark">A IA que </span><span class="bg-gradient-to-r from-primary to-primary-lighter bg-clip-text text-transparent" style="-webkit-text-fill-color: transparent;">entende você</span><br />
+          <span class="text-dark">e </span><span class="bg-gradient-to-r from-primary to-primary-lighter bg-clip-text text-transparent" style="-webkit-text-fill-color: transparent;">entende seu bolso!</span>
         </h2>
-        <p class="text-center text-[#8c8787] text-lg lg:text-xl mb-16 max-w-2xl mx-auto">
+        <p class="text-center text-gray-light text-lg lg:text-xl mb-16 max-w-2xl mx-auto">
           Tudo o que você precisa para ter controle financeiro
         </p>
 
         <!-- Analysis Card -->
-        <div class="max-w-5xl mx-auto bg-gradient-to-l from-[#1b329a] to-[#0b1958] rounded-[50px] p-6 lg:p-10 relative overflow-hidden shadow-[0px_1px_68px_0px_rgba(0,0,0,0.16)]">
+        <div class="max-w-5xl mx-auto bg-gradient-to-l from-primary to-primary-dark rounded-[50px] p-6 lg:p-10 relative overflow-hidden shadow-[0px_1px_68px_0px_rgba(0,0,0,0.16)]">
           <div class="relative z-10 flex flex-col lg:flex-row gap-6 lg:gap-12">
             <!-- Left Content -->
             <div class="flex-1">
               <!-- Tag - Liquid Glass -->
               <div class="flex gap-2 mb-16">
-                <div class="relative rounded-full overflow-hidden" style="border: 1px solid rgba(255,255,255,0.25);">
-                  <!-- Center blur layer with white tint -->
-                  <div class="absolute inset-0 rounded-full" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
-                  <span class="relative z-10 text-white px-5 py-2 flex items-center gap-2 text-[17px]" style="font-family: 'Inter', sans-serif; font-weight: 300;">
-                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
-                      <line x1="8.5" y1="10.5" x2="15.5" y2="6.5" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
-                      <line x1="8.5" y1="13.5" x2="15.5" y2="17.5" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
-                      <circle cx="18" cy="5" r="3" fill="white"/>
-                      <circle cx="6" cy="12" r="3" fill="white"/>
-                      <circle cx="18" cy="19" r="3" fill="white"/>
-                    </svg>
+                <div class="relative rounded-full overflow-hidden glass-border">
+                  <div class="absolute inset-0 rounded-full glass"></div>
+                  <span class="relative z-10 text-white px-5 py-2 flex items-center gap-2 text-[17px] font-light">
+                    <IconShare />
                     IA Avançada
                   </span>
                 </div>
               </div>
 
-              <h3 class="text-2xl lg:text-[32px] text-white font-semibold mb-2 leading-tight" style="font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;">
+              <h3 class="text-2xl lg:text-[32px] text-white font-semibold mb-2 leading-tight">
                 Análise Comportamental<br />Preditiva
               </h3>
 
-              <p class="text-white/80 text-base lg:text-[16px] mt-4 mb-6 leading-relaxed" style="font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-weight: 300;">
+              <p class="text-white/80 text-base lg:text-[16px] mt-4 mb-6 leading-relaxed font-light">
                 Clara aprende seus padrões de consumo e <span class="font-bold text-white">prevê como você vai gastar nos próximos 3 meses.</span><br />
                 Nossa IA identifica automaticamente oportunidades de economia antes que você perceba.
               </p>
 
               <!-- Features list -->
-              <div class="grid grid-cols-2 gap-x-6 gap-y-4 text-white text-[19px]" style="font-family: 'Inter', sans-serif; font-weight: 200;">
+              <div class="grid grid-cols-2 gap-x-6 gap-y-4 text-white text-[19px] font-extralight">
                 <div class="flex items-center gap-2">
-                  <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none">
-                    <circle cx="12" cy="12" r="10.75" fill="#2B3F6C"/>
-                    <path d="M8.5 12.5L11 15L15.5 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
+                  <IconCheck />
                   <span>Previsão de 3 meses</span>
                 </div>
                 <div class="flex items-center gap-2">
-                  <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none">
-                    <circle cx="12" cy="12" r="10.75" fill="#2B3F6C"/>
-                    <path d="M8.5 12.5L11 15L15.5 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
+                  <IconCheck />
                   <span>Economia automática</span>
                 </div>
                 <div class="flex items-center gap-2">
-                  <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none">
-                    <circle cx="12" cy="12" r="10.75" fill="#2B3F6C"/>
-                    <path d="M8.5 12.5L11 15L15.5 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
+                  <IconCheck />
                   <span>Alertas antecipados</span>
                 </div>
                 <div class="flex items-center gap-2">
-                  <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none">
-                    <circle cx="12" cy="12" r="10.75" fill="#2B3F6C"/>
-                    <path d="M8.5 12.5L11 15L15.5 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
+                  <IconCheck />
                   <span>Metas inteligentes</span>
                 </div>
               </div>
             </div>
 
             <!-- Right Card - Projection with Liquid Glass -->
-            <div class="w-full lg:w-[420px] min-h-[450px] relative rounded-[40px] overflow-hidden p-8 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]" style="border: 1px solid rgba(255,255,255,0.25); font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;">
-              <!-- Center blur layer with white tint -->
-              <div class="absolute inset-0 rounded-[40px]" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
+            <div class="w-full lg:w-[420px] min-h-[450px] relative rounded-[40px] overflow-hidden p-8 shadow-glass glass-border">
+              <div class="absolute inset-0 rounded-[40px] glass"></div>
 
               <div class="relative z-10">
                 <div class="flex justify-between items-start mb-44">
@@ -387,9 +308,9 @@ const assets = {
                     <p class="text-white/60 text-xs tracking-wider font-light">PROJEÇÃO</p>
                     <p class="text-white font-bold text-lg">Próximos 3 meses</p>
                   </div>
-                  <div class="relative rounded-full overflow-hidden text-[#18c47f] px-3 py-1 text-[17px] flex items-center gap-2" style="border: 1px solid rgba(255,255,255,0.25);">
-                    <div class="absolute inset-0 rounded-full" style="background: rgba(24, 196, 127, 0.39); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
-                    <svg class="relative z-10 w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <div class="relative rounded-full overflow-hidden text-success px-3 py-1 text-[17px] flex items-center gap-2 glass-border">
+                    <div class="absolute inset-0 rounded-full glass-success"></div>
+                    <svg class="relative z-10 w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                       <path d="M7 7L17 17M17 17H7M17 17V7" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     <span class="relative z-10">-14%</span>
@@ -423,13 +344,13 @@ const assets = {
                 <div class="grid grid-cols-2 gap-4">
                   <div class="relative rounded-[16px] h-[97px] flex flex-col items-center justify-center">
                     <div class="absolute inset-0 rounded-[16px] bg-[rgba(24,196,127,0.39)] opacity-60"></div>
-                    <p class="relative z-10 font-bold" style="color: #18C47F; font-variant-numeric: lining-nums tabular-nums; font-feature-settings: 'dlig' on; font-family: 'Inter', sans-serif; font-size: 31.707px; line-height: 1.4;">R$ 600</p>
-                    <p class="relative z-10 text-[14.275px]" style="color: rgba(255,255,255,0.38);">Economia/mês</p>
+                    <p class="relative z-10 font-bold text-[32px] leading-[1.4] text-success" style="font-variant-numeric: lining-nums tabular-nums; font-feature-settings: 'dlig' on;">R$ 600</p>
+                    <p class="relative z-10 text-[14px]" style="color: rgba(255,255,255,0.38);">Economia/mês</p>
                   </div>
                   <div class="relative rounded-[16px] h-[97px] flex flex-col items-center justify-center">
                     <div class="absolute inset-0 rounded-[16px] bg-[rgba(255,255,255,0.39)] opacity-60"></div>
-                    <p class="relative z-10 font-bold" style="color: white; font-variant-numeric: lining-nums tabular-nums; font-feature-settings: 'dlig' on; font-family: 'Inter', sans-serif; font-size: 31.707px; line-height: 1.4;">95%</p>
-                    <p class="relative z-10 text-[14.275px] text-white">Precisão</p>
+                    <p class="relative z-10 font-bold text-[32px] leading-[1.4] text-white" style="font-variant-numeric: lining-nums tabular-nums; font-feature-settings: 'dlig' on;">95%</p>
+                    <p class="relative z-10 text-[14px] text-white">Precisão</p>
                   </div>
                 </div>
               </div>
@@ -437,65 +358,47 @@ const assets = {
           </div>
         </div>
 
-        <!-- Benefits Grid - Glassmorphism style from Figma -->
+        <!-- Benefits Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
           <!-- Card 1: Previsão de gastos -->
-          <div class="relative w-full h-[189px] rounded-[31.785px] overflow-hidden shadow-[0_2.573px_19.041px_0_rgba(0,0,0,0.25)] hover:shadow-[0_4px_24px_0_rgba(0,0,0,0.3)] transition-shadow" style="background: rgba(0, 0, 0, 0); backdrop-filter: blur(10px);">
+          <div class="relative w-full h-[189px] rounded-[32px] overflow-hidden shadow-[0_2.573px_19.041px_0_rgba(0,0,0,0.25)] hover:shadow-[0_4px_24px_0_rgba(0,0,0,0.3)] transition-shadow glass-subtle">
             <div class="flex flex-col items-center justify-center h-full text-center px-5">
-              <!-- Lightning Icon -->
-              <div class="relative w-9 h-9 mb-3">
-                <img src={assets.iconLightningBenefits1} alt="" class="absolute w-[10px] h-[13px] left-[10px] top-[10px]" />
-                <img src={assets.iconLightningBenefits2} alt="" class="absolute w-[10px] h-[13px] left-[5px] top-[2px]" />
-              </div>
-              <h4 class="text-black font-bold text-[18.541px] leading-[1.52] mb-1">Previsão de gastos</h4>
-              <p class="text-black font-light text-[13.244px] leading-[1.2]">
-                Acompanha cada transação automaticamente. Você não precisa fazer nada
+              <IconLightning class="w-9 h-9 mb-3 text-primary" />
+              <h4 class="text-black font-bold text-[19px] leading-[1.52] mb-1">Previsão de gastos</h4>
+              <p class="text-black font-light text-[13px] leading-[1.2]">
+                Antecipa seus gastos futuros com base no seu comportamento financeiro.
               </p>
             </div>
           </div>
 
           <!-- Card 2: Captura de economias -->
-          <div class="relative w-full h-[189px] rounded-[31.785px] overflow-hidden shadow-[0_2.573px_19.041px_0_rgba(0,0,0,0.25)] hover:shadow-[0_4px_24px_0_rgba(0,0,0,0.3)] transition-shadow" style="background: rgba(0, 0, 0, 0); backdrop-filter: blur(10px);">
+          <div class="relative w-full h-[189px] rounded-[32px] overflow-hidden shadow-[0_2.573px_19.041px_0_rgba(0,0,0,0.25)] hover:shadow-[0_4px_24px_0_rgba(0,0,0,0.3)] transition-shadow glass-subtle">
             <div class="flex flex-col items-center justify-center h-full text-center px-5">
-              <!-- Wallet Icon -->
-              <div class="relative w-9 h-9 mb-3">
-                <img src={assets.iconWallet1} alt="" class="absolute w-[30px] h-[24px] left-[3px] top-[9px]" />
-                <img src={assets.iconWallet2} alt="" class="absolute w-[9px] h-[5px] left-[24px] top-[18px]" />
-                <img src={assets.iconWallet3} alt="" class="absolute w-[26px] h-[7px] left-[3px] top-[3px]" />
-              </div>
-              <h4 class="text-black font-bold text-[18.541px] leading-[1.52] mb-1">Captura de economias</h4>
-              <p class="text-black font-light text-[13.244px] leading-[1.2]">
+              <IconCard class="w-9 h-9 mb-3 text-primary" />
+              <h4 class="text-black font-bold text-[19px] leading-[1.52] mb-1">Captura de economias</h4>
+              <p class="text-black font-light text-[13px] leading-[1.2]">
                 Identificamos automaticamente onde você pode economizar dinheiro.
               </p>
             </div>
           </div>
 
           <!-- Card 3: Alertas preditivos -->
-          <div class="relative w-full h-[189px] rounded-[31.785px] overflow-hidden shadow-[0_2.573px_19.041px_0_rgba(0,0,0,0.25)] hover:shadow-[0_4px_24px_0_rgba(0,0,0,0.3)] transition-shadow" style="background: rgba(0, 0, 0, 0); backdrop-filter: blur(10px);">
+          <div class="relative w-full h-[189px] rounded-[32px] overflow-hidden shadow-[0_2.573px_19.041px_0_rgba(0,0,0,0.25)] hover:shadow-[0_4px_24px_0_rgba(0,0,0,0.3)] transition-shadow glass-subtle">
             <div class="flex flex-col items-center justify-center h-full text-center px-5">
-              <!-- Bell Icon -->
-              <div class="relative w-9 h-9 mb-3">
-                <img src={assets.iconBell1} alt="" class="absolute w-[24px] h-[25px] left-[6px] top-[3px]" />
-                <img src={assets.iconBell2} alt="" class="absolute w-[7px] h-[2px] left-[14px] top-[31px]" />
-              </div>
-              <h4 class="text-black font-bold text-[18.541px] leading-[1.52] mb-1">Alertas preditivos</h4>
-              <p class="text-black font-light text-[13.244px] leading-[1.2]">
+              <IconBell class="w-9 h-9 mb-3 text-primary" />
+              <h4 class="text-black font-bold text-[19px] leading-[1.52] mb-1">Alertas preditivos</h4>
+              <p class="text-black font-light text-[13px] leading-[1.2]">
                 Avisamos antes que um gasto fuja do controle.
               </p>
             </div>
           </div>
 
           <!-- Card 4: Metas adaptativas -->
-          <div class="relative w-full h-[189px] rounded-[31.785px] overflow-hidden shadow-[0_2.573px_19.041px_0_rgba(0,0,0,0.25)] hover:shadow-[0_4px_24px_0_rgba(0,0,0,0.3)] transition-shadow" style="background: rgba(0, 0, 0, 0); backdrop-filter: blur(10px);">
+          <div class="relative w-full h-[189px] rounded-[32px] overflow-hidden shadow-[0_2.573px_19.041px_0_rgba(0,0,0,0.25)] hover:shadow-[0_4px_24px_0_rgba(0,0,0,0.3)] transition-shadow glass-subtle">
             <div class="flex flex-col items-center justify-center h-full text-center px-5">
-              <!-- Rocket Icon -->
-              <div class="relative w-9 h-9 mb-3">
-                <img src={assets.iconRocket1} alt="" class="absolute w-[28px] h-[28px] left-[2px] top-[2px]" />
-                <img src={assets.iconRocket2} alt="" class="absolute w-[8px] h-[5px] left-[1px] top-[21px] rotate-45" />
-                <img src={assets.iconRocket3} alt="" class="absolute w-[5px] h-[5px] left-[16px] top-[8px] rotate-45" />
-              </div>
-              <h4 class="text-black font-bold text-[18.541px] leading-[1.52] mb-1">Metas adaptativas</h4>
-              <p class="text-black font-light text-[13.244px] leading-[1.2]">
+              <IconRocket class="w-9 h-9 mb-3 text-primary" />
+              <h4 class="text-black font-bold text-[19px] leading-[1.52] mb-1">Metas adaptativas</h4>
+              <p class="text-black font-light text-[13px] leading-[1.2]">
                 Suas metas se ajustam ao seu comportamento.
               </p>
             </div>
@@ -505,7 +408,7 @@ const assets = {
         <!-- Arrow down -->
         <div class="flex justify-center mt-12">
           <a href="#como-funciona" class="cursor-pointer">
-            <svg class="w-6 h-6 text-[#1b329a] animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-6 h-6 text-primary animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </a>
@@ -514,14 +417,12 @@ const assets = {
     </section>
 
     <!-- How It Works Section -->
-    <section class="relative pt-44 lg:pt-56 pb-32 lg:pb-48 px-6 -mt-24 lg:-mt-32 overflow-hidden">
-      <span id="como-funciona" class="absolute top-36 lg:top-48"></span>
+    <section id="como-funciona" class="relative pt-44 lg:pt-56 pb-32 lg:pb-48 px-6 -mt-24 lg:-mt-32 overflow-hidden scroll-mt-24">
       <!-- Video Background -->
       <div class="absolute inset-0 w-full h-full">
-        <video autoplay loop muted playsinline class="w-full h-full object-cover">
-          <source src="/images/header_animado.mp4" type="video/mp4" />
+        <video id="como-funciona-video" loop muted playsinline preload="none" poster="/images/video-poster.jpg" class="w-full h-full object-cover">
+          <source data-src="/images/header_animado.mp4" type="video/mp4" />
         </video>
-        <!-- Gradient overlay to enhance video quality -->
         <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(27, 50, 154, 0.4) 0%, rgba(11, 25, 88, 0.5) 50%, rgba(27, 50, 154, 0.4) 100%);"></div>
       </div>
 
@@ -529,30 +430,24 @@ const assets = {
         <h2 class="text-3xl lg:text-5xl text-center font-bold text-white mb-4">
           Como funciona?
         </h2>
-        <p class="text-center text-white/70 text-lg mb-16" style="font-family: 'Inter', sans-serif; font-weight: 200;">
+        <p class="text-center text-white/70 text-lg mb-16 font-extralight">
           4 passos simples para ter mais controle financeiro.
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           <!-- Step 1 -->
           <div class="flex items-center gap-4">
-            <div class="text-[80px] lg:text-[120px] font-bold leading-none w-[50px] lg:w-[80px] text-center" style="font-family: 'Inter', sans-serif; color: rgba(255, 255, 255, 1);">
+            <div class="text-[80px] lg:text-[120px] font-bold leading-none w-[50px] lg:w-[80px] text-center text-white">
               1
             </div>
-            <div class="relative rounded-[24px] lg:rounded-[53px] overflow-hidden shadow-[0px_4.32px_31.97px_0px_rgba(0,0,0,0.25)] flex-1 min-h-[140px] lg:h-[236px] -ml-8 lg:-ml-10" style="border: 1px solid rgba(255,255,255,0.25);">
-              <div class="absolute inset-0 rounded-[24px] lg:rounded-[53px]" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
+            <div class="relative rounded-[24px] lg:rounded-[53px] overflow-hidden shadow-[0px_4px_32px_0px_rgba(0,0,0,0.25)] flex-1 min-h-[140px] lg:h-[236px] -ml-8 lg:-ml-10 glass-border">
+              <div class="absolute inset-0 rounded-[24px] lg:rounded-[53px] glass"></div>
               <div class="relative z-10 px-4 py-6 lg:p-6 flex flex-col justify-center lg:h-full">
                 <div class="flex items-center gap-3 mb-1">
-                  <svg class="w-6 h-6 lg:w-10 lg:h-10 shrink-0" viewBox="0 0 24 24" fill="none">
-                    <circle cx="18" cy="5" r="2.5" fill="white"/>
-                    <circle cx="6" cy="12" r="2.5" fill="white"/>
-                    <circle cx="18" cy="19" r="2.5" fill="white"/>
-                    <line x1="8" y1="10.5" x2="16" y2="6" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
-                    <line x1="8" y1="13.5" x2="16" y2="18" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
-                  </svg>
-                  <h3 class="text-base lg:text-2xl font-bold text-white whitespace-nowrap" style="font-family: 'Inter', sans-serif;">Conecte suas contas</h3>
+                  <IconShare class="w-6 h-6 lg:w-10 lg:h-10 shrink-0" />
+                  <h3 class="text-base lg:text-2xl font-bold text-white whitespace-nowrap">Conecte suas contas</h3>
                 </div>
-                <p class="text-white/80 text-sm lg:text-lg ml-9 lg:ml-13" style="font-family: 'Inter', sans-serif; font-weight: 300;">
+                <p class="text-white/80 text-sm lg:text-lg ml-9 lg:ml-13 font-light">
                   Clara se conecta com seus bancos de forma segura. <span class="text-white">Leva menos de 2 minutos</span>
                 </p>
               </div>
@@ -561,20 +456,20 @@ const assets = {
 
           <!-- Step 2 -->
           <div class="flex items-center gap-4">
-            <div class="text-[80px] lg:text-[120px] font-bold leading-none w-[50px] lg:w-[80px] text-center shrink-0" style="font-family: 'Inter', sans-serif; color: rgba(255, 255, 255, 1);">
+            <div class="text-[80px] lg:text-[120px] font-bold leading-none w-[50px] lg:w-[80px] text-center shrink-0 text-white">
               2
             </div>
-            <div class="relative rounded-[24px] lg:rounded-[53px] overflow-hidden shadow-[0px_4.32px_31.97px_0px_rgba(0,0,0,0.25)] flex-1 min-h-[140px] lg:h-[236px] -ml-8 lg:-ml-10" style="border: 1px solid rgba(255,255,255,0.25);">
-              <div class="absolute inset-0 rounded-[24px] lg:rounded-[53px]" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
+            <div class="relative rounded-[24px] lg:rounded-[53px] overflow-hidden shadow-[0px_4px_32px_0px_rgba(0,0,0,0.25)] flex-1 min-h-[140px] lg:h-[236px] -ml-8 lg:-ml-10 glass-border">
+              <div class="absolute inset-0 rounded-[24px] lg:rounded-[53px] glass"></div>
               <div class="relative z-10 px-4 py-6 lg:p-6 flex flex-col justify-center lg:h-full">
                 <div class="flex items-center gap-3 mb-1">
-                  <div class="w-6 h-6 lg:w-10 lg:h-10 shrink-0 relative">
-                    <img src={assets.stepUserHead} alt="" class="absolute w-[8px] h-[8px] left-[8px] top-[1px] lg:w-[14px] lg:h-[14px] lg:left-[11px] lg:top-[2px]" />
-                    <img src={assets.stepUserBody} alt="" class="absolute w-[14px] h-[7px] left-[4px] top-[11px] lg:w-[24px] lg:h-[12px] lg:left-[6px] lg:top-[18px]" />
-                  </div>
-                  <h3 class="text-base lg:text-2xl font-bold text-white whitespace-nowrap" style="font-family: 'Inter', sans-serif;">Viva normalmente</h3>
+                  <svg class="w-6 h-6 lg:w-10 lg:h-10 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="8" r="4" fill="white"/>
+                    <path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                  </svg>
+                  <h3 class="text-base lg:text-2xl font-bold text-white whitespace-nowrap">Viva normalmente</h3>
                 </div>
-                <p class="text-white/80 text-sm lg:text-lg ml-9 lg:ml-13" style="font-family: 'Inter', sans-serif; font-weight: 300;">
+                <p class="text-white/80 text-sm lg:text-lg ml-9 lg:ml-13 font-light">
                   Clara acompanha tudo em tempo real, <span class="text-white">sem você precisar fazer nada.</span>
                 </p>
               </div>
@@ -583,21 +478,21 @@ const assets = {
 
           <!-- Step 3 -->
           <div class="flex items-center gap-4">
-            <div class="text-[80px] lg:text-[120px] font-bold leading-none w-[50px] lg:w-[80px] text-center shrink-0" style="font-family: 'Inter', sans-serif; color: rgba(255, 255, 255, 1);">
+            <div class="text-[80px] lg:text-[120px] font-bold leading-none w-[50px] lg:w-[80px] text-center shrink-0 text-white">
               3
             </div>
-            <div class="relative rounded-[24px] lg:rounded-[53px] overflow-hidden shadow-[0px_4.32px_31.97px_0px_rgba(0,0,0,0.25)] flex-1 min-h-[140px] lg:h-[236px] -ml-8 lg:-ml-10" style="border: 1px solid rgba(255,255,255,0.25);">
-              <div class="absolute inset-0 rounded-[24px] lg:rounded-[53px]" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
+            <div class="relative rounded-[24px] lg:rounded-[53px] overflow-hidden shadow-[0px_4px_32px_0px_rgba(0,0,0,0.25)] flex-1 min-h-[140px] lg:h-[236px] -ml-8 lg:-ml-10 glass-border">
+              <div class="absolute inset-0 rounded-[24px] lg:rounded-[53px] glass"></div>
               <div class="relative z-10 px-4 py-6 lg:p-6 flex flex-col justify-center lg:h-full">
                 <div class="flex items-center gap-3 mb-1">
-                  <div class="w-6 h-6 lg:w-10 lg:h-10 shrink-0 relative">
-                    <img src={assets.stepChartBg} alt="" class="absolute w-[20px] h-[20px] left-[1px] top-[1px] lg:w-[32px] lg:h-[32px] lg:left-[2px] lg:top-[2px]" />
-                    <img src={assets.stepChartLine} alt="" class="absolute w-[9px] h-[5px] left-[6px] top-[9px] lg:w-[14px] lg:h-[8px] lg:left-[10px] lg:top-[14px]" />
-                    <img src={assets.stepChartDot} alt="" class="absolute w-[4px] h-[4px] left-[17px] top-[3px] lg:w-[6px] lg:h-[6px] lg:left-[28px] lg:top-[4px]" />
-                  </div>
-                  <h3 class="text-base lg:text-2xl font-bold text-white whitespace-nowrap" style="font-family: 'Inter', sans-serif;">Receba insights</h3>
+                  <svg class="w-6 h-6 lg:w-10 lg:h-10 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="3" stroke="white" stroke-width="1.5" fill="none"/>
+                    <polyline points="7,16 10,11 14,13 18,8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <circle cx="18" cy="8" r="2" fill="white"/>
+                  </svg>
+                  <h3 class="text-base lg:text-2xl font-bold text-white whitespace-nowrap">Receba insights</h3>
                 </div>
-                <p class="text-white/80 text-sm lg:text-lg ml-9 lg:ml-13" style="font-family: 'Inter', sans-serif; font-weight: 300;">
+                <p class="text-white/80 text-sm lg:text-lg ml-9 lg:ml-13 font-light">
                   Alertas inteligentes quando algo precisar de sua atenção.
                 </p>
               </div>
@@ -606,21 +501,21 @@ const assets = {
 
           <!-- Step 4 -->
           <div class="flex items-center gap-4">
-            <div class="text-[80px] lg:text-[120px] font-bold leading-none w-[50px] lg:w-[80px] text-center shrink-0" style="font-family: 'Inter', sans-serif; color: rgba(255, 255, 255, 1);">
+            <div class="text-[80px] lg:text-[120px] font-bold leading-none w-[50px] lg:w-[80px] text-center shrink-0 text-white">
               4
             </div>
-            <div class="relative rounded-[24px] lg:rounded-[53px] overflow-hidden shadow-[0px_4.32px_31.97px_0px_rgba(0,0,0,0.25)] flex-1 min-h-[140px] lg:h-[236px] -ml-8 lg:-ml-10" style="border: 1px solid rgba(255,255,255,0.25);">
-              <div class="absolute inset-0 rounded-[24px] lg:rounded-[53px]" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
+            <div class="relative rounded-[24px] lg:rounded-[53px] overflow-hidden shadow-[0px_4px_32px_0px_rgba(0,0,0,0.25)] flex-1 min-h-[140px] lg:h-[236px] -ml-8 lg:-ml-10 glass-border">
+              <div class="absolute inset-0 rounded-[24px] lg:rounded-[53px] glass"></div>
               <div class="relative z-10 px-4 py-6 lg:p-6 flex flex-col justify-center lg:h-full">
                 <div class="flex items-center gap-3 mb-1">
-                  <div class="w-6 h-6 lg:w-10 lg:h-10 shrink-0 relative">
-                    <img src={assets.stepPaletteLeft} alt="" class="absolute w-[10px] h-[19px] left-[1px] top-[1px] lg:w-[16px] lg:h-[32px] lg:left-[2px] lg:top-[2px]" />
-                    <img src={assets.stepPaletteTopRight} alt="" class="absolute w-[7px] h-[12px] left-[12px] top-[2px] lg:w-[12px] lg:h-[20px] lg:left-[20px] lg:top-[4px]" />
-                    <img src={assets.stepPaletteBottomRight} alt="" class="absolute w-[8px] h-[10px] left-[12px] top-[11px] lg:w-[14px] lg:h-[16px] lg:left-[20px] lg:top-[18px]" />
-                  </div>
-                  <h3 class="text-base lg:text-2xl font-bold text-white whitespace-nowrap" style="font-family: 'Inter', sans-serif;">Mais controle na palma da mão</h3>
+                  <svg class="w-6 h-6 lg:w-10 lg:h-10 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="7" cy="12" r="4" fill="white" opacity="0.9"/>
+                    <circle cx="15" cy="8" r="3" fill="white" opacity="0.7"/>
+                    <circle cx="15" cy="16" r="3" fill="white" opacity="0.5"/>
+                  </svg>
+                  <h3 class="text-base lg:text-2xl font-bold text-white whitespace-nowrap">Mais controle na palma da mão</h3>
                 </div>
-                <p class="text-white/80 text-sm lg:text-lg ml-9 lg:ml-13" style="font-family: 'Inter', sans-serif; font-weight: 300;">
+                <p class="text-white/80 text-sm lg:text-lg ml-9 lg:ml-13 font-light">
                   Clara descomplica suas finanças e te ajuda a viver <span class="text-white">mais tranquilo e preparado!</span>
                 </p>
               </div>
@@ -630,17 +525,17 @@ const assets = {
 
         <!-- CTA Button -->
         <div class="flex justify-center mt-16">
-          <a href="#cta" class="bg-white rounded-[128.571px] px-10 py-3 text-[25.849px] text-[#1b329a] text-center cursor-pointer hover:opacity-90" style="font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-weight: 400;">
+          <a href="#cta" class="bg-white rounded-full px-10 py-3 text-[26px] text-primary text-center cursor-pointer hover:opacity-90">
             Fale com a Clara →
           </a>
         </div>
       </div>
 
-      <!-- Hero Image Section - inside the blue video area -->
+      <!-- Hero Image Section -->
       <div class="relative h-[600px] lg:h-[888px] mx-4 lg:mx-20 mt-16 rounded-[60px] lg:rounded-[100px] overflow-hidden">
       <div class="absolute inset-0">
         <img
-          src={assets.heroImagePerson}
+          src="/images/hero-person.jpg"
           alt="Pessoa usando smartphone com o aplicativo Clara para controle financeiro"
           class="w-full h-full object-cover"
           loading="lazy"
@@ -650,26 +545,22 @@ const assets = {
       </div>
 
       <!-- Alert Card -->
-      <div class="absolute left-2 lg:left-6 xl:left-16 top-1/2 -translate-y-1/2 lg:translate-y-0 lg:top-1/4">
-        <div class="relative rounded-[20px] lg:rounded-[28px] overflow-hidden p-3 lg:p-5 max-w-[260px] lg:max-w-[420px]" style="border: 1px solid rgba(255,255,255,0.25);">
-          <!-- Center blur layer -->
-          <div class="absolute inset-0 rounded-[20px] lg:rounded-[28px]" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"></div>
-          <!-- Edge distortion layer -->
-          <div class="absolute inset-0 rounded-[20px] lg:rounded-[28px] pointer-events-none" style="background: transparent; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); filter: url(#liquid-glass-distortion); mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%); -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%);"></div>
-          <div class="relative z-10 flex items-center gap-3 lg:gap-4">
+      <div class="absolute left-4 lg:left-8 xl:left-16 top-1/2 -translate-y-1/2 lg:translate-y-0 lg:top-1/4">
+        <div class="relative rounded-[24px] lg:rounded-[34px] overflow-hidden p-4 lg:p-7 max-w-[280px] lg:max-w-[520px]" style="background: rgba(244, 244, 244, 0.31); opacity: 0.92;">
+          <div class="absolute inset-0 rounded-[24px] lg:rounded-[34px]" style="backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);"></div>
+          <div class="absolute inset-0 rounded-[24px] lg:rounded-[34px] pointer-events-none" style="background: transparent; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); filter: url(#liquid-glass-distortion); mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%); -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, transparent 60%, black 100%);"></div>
+          <div class="relative z-10 flex items-center gap-4 lg:gap-7">
             <!-- Logo Button -->
-            <div class="relative w-[50px] h-[50px] lg:w-[65px] lg:h-[65px] rounded-[14px] lg:rounded-[18px] overflow-visible shrink-0" style="background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(217, 217, 217, 0.3) 100%); border: 1px solid rgba(156, 156, 156, 0.5); box-shadow: -42px 103px 31px 0px rgba(145,145,145,0), -27px 66px 29px 0px rgba(145,145,145,0.01), -15px 37px 24px 0px rgba(145,145,145,0.03), -7px 17px 18px 0px rgba(145,145,145,0.04), -2px 4px 10px 0px rgba(145,145,145,0.05);">
-              <div class="absolute inset-0 rounded-[14px] lg:rounded-[18px]" style="backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);"></div>
-              <!-- Inner shadow overlay -->
-              <div class="absolute inset-0 pointer-events-none rounded-[inherit]" style="box-shadow: inset 0px -5px 4px 0px rgba(255,255,255,0.25), inset 0px 4px 4px 0px rgba(255,255,255,0.25);"></div>
-              <!-- Clara logo positioned over the button -->
-              <img src={assets.alertLogo} alt="Clara" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[30px] lg:w-[40px] h-[10px] lg:h-[14px] z-10" />
+            <div class="relative w-[55px] h-[55px] lg:w-[90px] lg:h-[90px] rounded-[16px] lg:rounded-[28px] overflow-hidden shrink-0" style="background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(217, 217, 217, 0.3) 100%); border: 1px solid rgba(156, 156, 156, 0.5); box-shadow: -59px 145px 44px 0px rgba(145,145,145,0), -38px 93px 41px 0px rgba(145,145,145,0.01), -21px 52px 34px 0px rgba(145,145,145,0.03), -10px 24px 25px 0px rgba(145,145,145,0.04), -3px 6px 14px 0px rgba(145,145,145,0.05);">
+              <div class="absolute inset-0 rounded-[16px] lg:rounded-[28px]" style="backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);"></div>
+              <div class="absolute inset-0 pointer-events-none rounded-[inherit]" style="box-shadow: inset 0px -7px 6px 0px rgba(255,255,255,0.25), inset 0px 6px 6px 0px rgba(255,255,255,0.25);"></div>
+              <img src="/images/alert-logo.png" alt="Clara" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[32px] lg:w-[55px] h-auto z-10" loading="lazy" decoding="async" />
             </div>
-            <div class="text-white">
-              <p class="text-sm lg:text-base mb-0.5" style="font-family: 'Inter', sans-serif; font-weight: 400;">
-                Alerta de próximo vencimento
+            <div class="text-white flex-1">
+              <p class="text-sm lg:text-xl font-semibold mb-1 lg:mb-2">
+                Alerta de próximo vencimento ⚠️
               </p>
-              <p class="text-white text-xs lg:text-sm" style="font-family: 'Inter', sans-serif; font-weight: 200;">
+              <p class="text-white text-xs lg:text-xl font-normal">
                 Sua conta de internet no valor de R$ 97,95 vence em 3 dias.
               </p>
             </div>
@@ -681,30 +572,34 @@ const assets = {
 
     <!-- Final CTA Section -->
     <section id="cta" class="bg-white py-20 lg:py-32 px-6 rounded-t-[30px] lg:rounded-t-[60px] relative z-20 -mt-12">
-
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl lg:text-5xl font-bold mb-4">
-          <span class="text-[#383838]">Pronto para ter </span>
-          <span class="bg-gradient-to-r from-[#1b329a] to-[#728fbf] bg-clip-text text-transparent" style="-webkit-text-fill-color: transparent;">Clara?</span>
+          <span class="text-dark">Pronto para ter a </span>
+          <span class="bg-gradient-to-r from-primary to-primary-lighter bg-clip-text text-transparent" style="-webkit-text-fill-color: transparent;">Clara?</span>
         </h2>
-        <p class="text-[#8c8787] text-lg lg:text-xl mb-12">
+        <p class="text-gray-light text-lg lg:text-xl mb-12">
           Entre para a lista de espera e seja um dos primeiros.
         </p>
 
-        <!-- Email Form -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-[700px] mx-auto">
+        <!-- Email Form - Formspree -->
+        <form action="https://formspree.io/f/FORM_ID" method="POST" class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-[700px] mx-auto">
+          <input type="text" name="_gotcha" style="display:none" />
+          <label for="email-input" class="sr-only">Endereço de e-mail</label>
           <input
+            id="email-input"
             type="email"
+            name="email"
+            required
             placeholder="seu@email.com"
-            class="w-full sm:flex-1 px-6 py-4 bg-[#ededed] rounded-full text-[20px] text-[#383838] placeholder-[#c0c0c0] focus:outline-none focus:ring-2 focus:ring-[#1b329a]" style="font-family: 'Inter', sans-serif;"
+            class="w-full sm:flex-1 px-6 py-4 bg-[#ededed] rounded-full text-[20px] text-dark placeholder-gray-lighter focus:outline-none focus:ring-2 focus:ring-primary"
           />
-          <a href="#" class="w-full sm:w-auto bg-gradient-to-r from-[#728fbf] to-[#1b329a] text-white px-8 py-4 rounded-full text-[20px] font-normal hover:opacity-90 transition-opacity whitespace-nowrap cursor-pointer text-center" style="font-family: 'Inter', sans-serif;">
+          <button type="submit" class="w-full sm:w-auto bg-gradient-to-r from-primary-lighter to-primary text-white px-8 py-4 rounded-full text-[20px] font-normal hover:opacity-90 transition-opacity whitespace-nowrap cursor-pointer text-center">
             Entrar →
-          </a>
-        </div>
+          </button>
+        </form>
 
-        <p class="text-[#8c8787] text-base mt-8">
-          Sem compromisso. Cancele como quiser.
+        <p class="text-gray-light text-base mt-8">
+          Sem e-mails chatos! Vamos só te mandar a confirmação :)
         </p>
       </div>
     </section>
@@ -712,14 +607,34 @@ const assets = {
     <!-- Footer -->
     <footer class="bg-white py-12 px-6 border-t border-gray-100">
       <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <img src={assets.logoBlue} alt="Clara" width="134" height="45" />
-        <nav class="flex gap-8 text-[#8c8787] text-base" style="font-family: 'Inter', sans-serif;">
-          <a href="#" class="hover:text-[#1b329a] transition-colors">Privacidade</a>
-          <a href="#" class="hover:text-[#1b329a] transition-colors">Termos</a>
-          <a href="#" class="hover:text-[#1b329a] transition-colors">Contato</a>
+        <img src="/images/logo-blue.png" alt="Clara" width="134" height="45" loading="lazy" decoding="async" />
+        <nav class="flex gap-8 text-gray-light text-base">
+          <a href="/privacidade" class="hover:text-primary transition-colors">Privacidade</a>
         </nav>
-        <p class="text-[#8c8787] text-base" style="font-family: 'Inter', sans-serif;">2025®Clara</p>
+        <p class="text-gray-light text-base">{currentYear} &copy; Clara</p>
       </div>
     </footer>
+
+    <!-- Lazy-load second video via IntersectionObserver -->
+    <script>
+      const video = document.getElementById('como-funciona-video') as HTMLVideoElement | null;
+      if (video) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const source = video.querySelector<HTMLSourceElement>('source[data-src]');
+              if (source && source.dataset.src) {
+                source.src = source.dataset.src;
+                source.removeAttribute('data-src');
+                video.load();
+                video.play();
+              }
+              observer.unobserve(video);
+            }
+          });
+        }, { rootMargin: '200px' });
+        observer.observe(video);
+      }
+    </script>
   </body>
 </html>
