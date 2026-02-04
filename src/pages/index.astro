@@ -37,8 +37,8 @@ const currentYear = new Date().getFullYear();
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="Clara" />
     <meta property="og:image" content="https://souaclara.com/og-image.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="2000" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -179,9 +179,9 @@ const currentYear = new Date().getFullYear();
         </a>
 
         <!-- Subtitle -->
-        <p class="text-white text-xl lg:text-[25px] mt-16 mb-8 font-bold">
+        <h2 class="text-white text-xl lg:text-[25px] mt-16 mb-8 font-bold">
           Confira as vantagens de ter a Clara com você:
-        </p>
+        </h2>
 
         <!-- Feature Cards - Liquid Glass style -->
         <div class="flex flex-col md:flex-row gap-6 lg:gap-8 mt-4 px-4">
@@ -593,7 +593,7 @@ const currentYear = new Date().getFullYear();
 
         <!-- Email Form - Formspree -->
         <form action="https://formspree.io/f/FORM_ID" method="POST" class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-[700px] mx-auto">
-          <input type="text" name="_gotcha" style="display:none" />
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <label for="email-input" class="sr-only">Endereço de e-mail</label>
           <input
             id="email-input"
@@ -635,7 +635,7 @@ const currentYear = new Date().getFullYear();
         if (p !== undefined) {
           p.catch(() => {
             const resume = () => {
-              video.play();
+              video.play().catch(() => {});
               document.removeEventListener('touchstart', resume);
               document.removeEventListener('click', resume);
             };
@@ -648,9 +648,12 @@ const currentYear = new Date().getFullYear();
       function setupCrossfadeLoop(a: HTMLVideoElement, b: HTMLVideoElement) {
         let active = a;
         let standby = b;
+        let isSwitching = false;
 
         function onTimeUpdate() {
+          if (isSwitching) return;
           if (active.duration && active.currentTime >= active.duration - CROSSFADE_OFFSET) {
+            isSwitching = true;
             standby.currentTime = 0;
             tryPlay(standby);
             standby.style.opacity = '1';
@@ -660,6 +663,7 @@ const currentYear = new Date().getFullYear();
             standby = prev;
             active.addEventListener('timeupdate', onTimeUpdate);
             prev.removeEventListener('timeupdate', onTimeUpdate);
+            setTimeout(() => { isSwitching = false; }, 1000);
           }
         }
 
@@ -688,7 +692,7 @@ const currentYear = new Date().getFullYear();
                 }
               });
               setupCrossfadeLoop(cfA, cfB);
-              observer.unobserve(cfA);
+              observer.disconnect();
             }
           });
         }, { rootMargin: '200px' });
