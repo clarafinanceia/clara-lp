@@ -3,6 +3,7 @@
   "short_name": "Clara",
   "description": "Acompanhe gastos em tempo real, receba insights personalizados e economize automaticamente.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#1b329a",
