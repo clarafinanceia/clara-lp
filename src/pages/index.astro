@@ -102,17 +102,25 @@ const currentYear = new Date().getFullYear();
   <body class="overflow-x-hidden">
     <!-- Hero Section -->
     <section class="relative min-h-screen overflow-hidden">
-      <!-- Video Background -->
-      <div class="absolute inset-0 w-full h-full">
+      <!-- Video Background (crossfade loop) -->
+      <div class="absolute inset-0 w-full h-full" id="hero-video-container">
         <video
-          id="hero-video"
+          id="hero-video-a"
           autoplay
-          loop
           muted
           playsinline
           preload="auto"
           poster="/images/video-poster.jpg"
-          class="w-full h-full object-cover"
+          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100"
+        >
+          <source src="/images/header_animado.mp4" type="video/mp4" />
+        </video>
+        <video
+          id="hero-video-b"
+          muted
+          playsinline
+          preload="auto"
+          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
         >
           <source src="/images/header_animado.mp4" type="video/mp4" />
         </video>
@@ -417,9 +425,12 @@ const currentYear = new Date().getFullYear();
 
     <!-- How It Works Section -->
     <section id="como-funciona" class="relative pt-44 lg:pt-56 pb-32 lg:pb-48 px-6 -mt-24 lg:-mt-32 overflow-hidden scroll-mt-24">
-      <!-- Video Background -->
-      <div class="absolute inset-0 w-full h-full">
-        <video id="como-funciona-video" loop muted playsinline preload="none" poster="/images/video-poster.jpg" class="w-full h-full object-cover">
+      <!-- Video Background (crossfade loop) -->
+      <div class="absolute inset-0 w-full h-full" id="como-funciona-video-container">
+        <video id="como-funciona-video-a" muted playsinline preload="none" poster="/images/video-poster.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100">
+          <source data-src="/images/header_animado.mp4" type="video/mp4" />
+        </video>
+        <video id="como-funciona-video-b" muted playsinline preload="none" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0">
           <source data-src="/images/header_animado.mp4" type="video/mp4" />
         </video>
         <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(27, 50, 154, 0.4) 0%, rgba(11, 25, 88, 0.5) 50%, rgba(27, 50, 154, 0.4) 100%);"></div>
@@ -614,9 +625,11 @@ const currentYear = new Date().getFullYear();
       </div>
     </footer>
 
-    <!-- Force autoplay for hero video (mobile browser policy fallback) -->
+    <!-- Seamless crossfade video loop -->
     <script>
-      function tryPlayVideo(video: HTMLVideoElement) {
+      const CROSSFADE_OFFSET = 1; // seconds before end to start crossfade
+
+      function tryPlay(video: HTMLVideoElement) {
         video.muted = true;
         const p = video.play();
         if (p !== undefined) {
@@ -632,45 +645,54 @@ const currentYear = new Date().getFullYear();
         }
       }
 
-      const heroVideo = document.getElementById('hero-video') as HTMLVideoElement | null;
-      if (heroVideo) tryPlayVideo(heroVideo);
-    </script>
+      function setupCrossfadeLoop(a: HTMLVideoElement, b: HTMLVideoElement) {
+        let active = a;
+        let standby = b;
 
-    <!-- Lazy-load second video via IntersectionObserver -->
-    <script>
-      function tryPlayLazy(v: HTMLVideoElement) {
-        v.muted = true;
-        const p = v.play();
-        if (p !== undefined) {
-          p.catch(() => {
-            const resume = () => {
-              v.play();
-              document.removeEventListener('touchstart', resume);
-              document.removeEventListener('click', resume);
-            };
-            document.addEventListener('touchstart', resume, { once: true });
-            document.addEventListener('click', resume, { once: true });
-          });
+        function onTimeUpdate() {
+          if (active.duration && active.currentTime >= active.duration - CROSSFADE_OFFSET) {
+            standby.currentTime = 0;
+            tryPlay(standby);
+            standby.style.opacity = '1';
+            active.style.opacity = '0';
+            const prev = active;
+            active = standby;
+            standby = prev;
+            active.addEventListener('timeupdate', onTimeUpdate);
+            prev.removeEventListener('timeupdate', onTimeUpdate);
+          }
         }
+
+        a.addEventListener('timeupdate', onTimeUpdate);
+        tryPlay(a);
       }
 
-      const video = document.getElementById('como-funciona-video') as HTMLVideoElement | null;
-      if (video) {
+      // Hero videos
+      const heroA = document.getElementById('hero-video-a') as HTMLVideoElement | null;
+      const heroB = document.getElementById('hero-video-b') as HTMLVideoElement | null;
+      if (heroA && heroB) setupCrossfadeLoop(heroA, heroB);
+
+      // Como Funciona videos (lazy-loaded)
+      const cfA = document.getElementById('como-funciona-video-a') as HTMLVideoElement | null;
+      const cfB = document.getElementById('como-funciona-video-b') as HTMLVideoElement | null;
+      if (cfA && cfB) {
         const observer = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
-              const source = video.querySelector<HTMLSourceElement>('source[data-src]');
-              if (source && source.dataset.src) {
-                source.src = source.dataset.src;
-                source.removeAttribute('data-src');
-                video.load();
-                tryPlayLazy(video);
-              }
-              observer.unobserve(video);
+              [cfA, cfB].forEach(v => {
+                const source = v.querySelector<HTMLSourceElement>('source[data-src]');
+                if (source && source.dataset.src) {
+                  source.src = source.dataset.src;
+                  source.removeAttribute('data-src');
+                  v.load();
+                }
+              });
+              setupCrossfadeLoop(cfA, cfB);
+              observer.unobserve(cfA);
             }
           });
         }, { rootMargin: '200px' });
-        observer.observe(video);
+        observer.observe(cfA);
       }
     </script>
   </body>
