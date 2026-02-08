@@ -5,6 +5,7 @@ import IconLightning from '../components/IconLightning.astro';
 import IconCard from '../components/IconCard.astro';
 import IconBell from '../components/IconBell.astro';
 import IconRocket from '../components/IconRocket.astro';
+import CookieConsent from '../components/CookieConsent.astro';
 import '../styles/global.css';
 
 const currentYear = new Date().getFullYear();
@@ -53,18 +54,10 @@ const currentYear = new Date().getFullYear();
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json" />
 
-    <!-- Google Fonts - Non-blocking -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Inter:wght@200;300;400;600;700&display=swap"
-      onload="this.rel='stylesheet'"
-    />
-    <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Inter:wght@200;300;400;600;700&display=swap" rel="stylesheet" />
-    </noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Inter:wght@200;300;400;600;700&display=swap" />
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -591,6 +584,7 @@ const currentYear = new Date().getFullYear();
         </p>
 
         <!-- Email Form - Formspree -->
+        <!-- TODO: Substituir FORM_ID pelo ID real do formulário Formspree antes de ir para produção -->
         <form action="https://formspree.io/f/FORM_ID" method="POST" class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-[700px] mx-auto">
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <label for="email-input" class="sr-only">Endereço de e-mail</label>
@@ -623,6 +617,8 @@ const currentYear = new Date().getFullYear();
         <p class="text-gray-light text-base">{currentYear} &copy; Clara</p>
       </div>
     </footer>
+
+    <CookieConsent />
 
     <!-- Seamless crossfade video loop -->
     <script>

@@ -4,7 +4,3 @@ Allow: /
 
 # Sitemap
 Sitemap: https://souaclara.com/sitemap-index.xml
-
-# Disallow admin or private paths (if any)
-Disallow: /api/
-Disallow: /_astro/

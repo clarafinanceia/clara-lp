@@ -9,6 +9,9 @@ export default defineConfig({
   site: 'https://souaclara.com',
   integrations: [sitemap()],
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    build: {
+      assetsInlineLimit: 0
+    }
   }
 });

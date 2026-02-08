@@ -7,6 +7,7 @@ interface Props {
 
 const { title, description, noindex = false } = Astro.props;
 import '../styles/global.css';
+import CookieConsent from '../components/CookieConsent.astro';
 const currentYear = new Date().getFullYear();
 ---
 
@@ -32,23 +33,17 @@ const currentYear = new Date().getFullYear();
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json" />
 
-    <!-- Google Fonts - Non-blocking -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Inter:wght@200;300;400;600;700&display=swap"
-      onload="this.rel='stylesheet'"
-    />
-    <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Inter:wght@200;300;400;600;700&display=swap" rel="stylesheet" />
-    </noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Inter:wght@200;300;400;600;700&display=swap" />
 
     <slot name="head" />
   </head>
   <body class="overflow-x-hidden">
     <slot />
+
+    <CookieConsent />
 
     <!-- Footer -->
     <footer class="bg-white py-12 px-6 border-t border-gray-100">

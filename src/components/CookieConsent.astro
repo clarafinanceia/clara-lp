@@ -1,0 +1,45 @@
+---
+---
+
+<div id="cookie-consent" class="fixed bottom-0 left-0 right-0 z-[9999] p-4 bg-white shadow-[0_-2px_16px_rgba(0,0,0,0.1)] border-t border-gray-100 translate-y-full transition-transform duration-300">
+  <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+    <p class="text-dark text-sm leading-relaxed">
+      Utilizamos cookies e recursos externos para melhorar sua experiência.
+      Consulte nossa <a href="/privacidade" class="text-primary underline">Política de Privacidade</a>.
+    </p>
+    <div class="flex gap-3 shrink-0">
+      <button id="cookie-reject" class="px-5 py-2 text-sm text-gray-light border border-gray-lighter rounded-full hover:bg-gray-50 transition-colors cursor-pointer">
+        Rejeitar
+      </button>
+      <button id="cookie-accept" class="px-5 py-2 text-sm text-white bg-primary rounded-full hover:opacity-90 transition-opacity cursor-pointer">
+        Aceitar
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const banner = document.getElementById('cookie-consent');
+  const acceptBtn = document.getElementById('cookie-accept');
+  const rejectBtn = document.getElementById('cookie-reject');
+
+  if (!localStorage.getItem('cookie-consent')) {
+    requestAnimationFrame(() => {
+      banner?.classList.remove('translate-y-full');
+    });
+  }
+
+  function hideBanner() {
+    banner?.classList.add('translate-y-full');
+  }
+
+  acceptBtn?.addEventListener('click', () => {
+    localStorage.setItem('cookie-consent', 'accepted');
+    hideBanner();
+  });
+
+  rejectBtn?.addEventListener('click', () => {
+    localStorage.setItem('cookie-consent', 'rejected');
+    hideBanner();
+  });
+</script>
