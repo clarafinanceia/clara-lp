@@ -49,6 +49,8 @@ export const POST: APIRoute = async ({ request }) => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Origin': 'https://souaclara.com',
+          'Referer': 'https://souaclara.com/',
         },
         body: JSON.stringify({ email }),
       }
