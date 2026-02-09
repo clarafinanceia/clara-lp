@@ -793,12 +793,12 @@ const currentYear = new Date().getFullYear();
               const errorData = await response.json().catch(() => ({}));
               const errorMessage = errorData.message || errorData.error || 'Erro ao cadastrar e-mail.';
 
-              if (response.status === 409) {
+              if (response.status === 409 || errorMessage.includes('já está na lista')) {
                 // Email já cadastrado
                 showFeedback('Este e-mail já está cadastrado na lista de espera.', 'error');
               } else if (response.status === 400) {
-                // Bad request
-                showFeedback('E-mail inválido. Por favor, verifique e tente novamente.', 'error');
+                // Bad request — usar mensagem do backend
+                showFeedback(errorMessage, 'error');
               } else {
                 showFeedback(`Erro: ${errorMessage}`, 'error');
               }
