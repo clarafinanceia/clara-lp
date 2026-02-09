@@ -583,9 +583,8 @@ const currentYear = new Date().getFullYear();
           Entre para a lista de espera e seja um dos primeiros.
         </p>
 
-        <!-- Email Form - Formspree -->
-        <!-- TODO: Substituir FORM_ID pelo ID real do formulário Formspree antes de ir para produção -->
-        <form action="https://formspree.io/f/FORM_ID" method="POST" class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-[700px] mx-auto">
+        <!-- Email Form - Waitlist -->
+        <form id="waitlist-form" class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-[700px] mx-auto" novalidate>
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <label for="email-input" class="sr-only">Endereço de e-mail</label>
           <input
@@ -600,6 +599,11 @@ const currentYear = new Date().getFullYear();
             Entrar →
           </button>
         </form>
+
+        <!-- Mensagens de feedback -->
+        <div id="form-feedback" class="mt-4 text-center hidden">
+          <p id="feedback-message" class="text-lg"></p>
+        </div>
 
         <p class="text-gray-light text-base mt-8">
           Sem e-mails chatos! Vamos só te mandar a confirmação :)
@@ -693,6 +697,132 @@ const currentYear = new Date().getFullYear();
         }, { rootMargin: '200px' });
         observer.observe(cfA);
       }
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('waitlist-form') as HTMLFormElement;
+        const emailInput = document.getElementById('email-input') as HTMLInputElement;
+        const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+        const feedback = document.getElementById('form-feedback') as HTMLDivElement;
+        const feedbackMessage = document.getElementById('feedback-message') as HTMLParagraphElement;
+
+        // Estado do botão
+        const originalButtonText = submitButton.textContent;
+        let isSubmitting = false;
+
+        // Função para mostrar feedback
+        function showFeedback(message: string, type: 'success' | 'error') {
+          feedback.classList.remove('hidden');
+          feedbackMessage.textContent = message;
+          feedbackMessage.className = type === 'success'
+            ? 'text-lg text-green-600 font-semibold'
+            : 'text-lg text-red-600 font-semibold';
+        }
+
+        // Função para resetar feedback
+        function hideFeedback() {
+          feedback.classList.add('hidden');
+          feedbackMessage.textContent = '';
+        }
+
+        // Validação de email
+        function isValidEmail(email: string): boolean {
+          const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return regex.test(email);
+        }
+
+        // Handler do formulário
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+
+          // Prevenir múltiplos envios
+          if (isSubmitting) return;
+
+          const email = emailInput.value.trim();
+          const honeypot = (form.querySelector('input[name="_gotcha"]') as HTMLInputElement)?.value;
+
+          // Validação honeypot (anti-spam)
+          if (honeypot) {
+            console.warn('Bot detected');
+            return;
+          }
+
+          // Validação de email
+          if (!email) {
+            showFeedback('Por favor, digite seu e-mail.', 'error');
+            emailInput.focus();
+            return;
+          }
+
+          if (!isValidEmail(email)) {
+            showFeedback('Por favor, digite um e-mail válido.', 'error');
+            emailInput.focus();
+            return;
+          }
+
+          // Estado de loading
+          isSubmitting = true;
+          submitButton.disabled = true;
+          submitButton.textContent = 'Enviando...';
+          submitButton.classList.add('opacity-50', 'cursor-not-allowed');
+          hideFeedback();
+
+          try {
+            const response = await fetch('/api/waitlist', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ email }),
+            });
+
+            if (response.ok) {
+              // Sucesso
+              showFeedback('✅ E-mail cadastrado com sucesso! Você receberá novidades em breve.', 'success');
+              form.reset();
+
+              // Analytics (opcional - se tiver GA/GTM)
+              if (typeof gtag !== 'undefined') {
+                gtag('event', 'waitlist_signup', {
+                  method: 'email',
+                });
+              }
+            } else {
+              // Erro do servidor
+              const errorData = await response.json().catch(() => ({}));
+              const errorMessage = errorData.message || errorData.error || 'Erro ao cadastrar e-mail.';
+
+              if (response.status === 409) {
+                // Email já cadastrado
+                showFeedback('Este e-mail já está cadastrado na lista de espera.', 'error');
+              } else if (response.status === 400) {
+                // Bad request
+                showFeedback('E-mail inválido. Por favor, verifique e tente novamente.', 'error');
+              } else {
+                showFeedback(`Erro: ${errorMessage}`, 'error');
+              }
+            }
+          } catch (error) {
+            // Erro de rede ou timeout
+            console.error('Error submitting form:', error);
+            showFeedback('Erro de conexão. Verifique sua internet e tente novamente.', 'error');
+          } finally {
+            // Resetar estado do botão
+            isSubmitting = false;
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+            submitButton.classList.remove('opacity-50', 'cursor-not-allowed');
+          }
+        });
+
+        // Limpar mensagem de erro ao digitar
+        emailInput.addEventListener('input', () => {
+          if (!feedback.classList.contains('hidden')) {
+            hideFeedback();
+          }
+        });
+      });
     </script>
   </body>
 </html>
