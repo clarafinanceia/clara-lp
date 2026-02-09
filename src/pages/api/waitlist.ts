@@ -3,6 +3,17 @@ import type { APIRoute } from 'astro';
 export const prerender = false; // Força SSR para esta rota
 
 export const POST: APIRoute = async ({ request }) => {
+  const railwayUrl = import.meta.env.RAILWAY_API_URL;
+  const railwayKey = import.meta.env.RAILWAY_API_KEY;
+
+  if (!railwayUrl || !railwayKey) {
+    console.error('Missing RAILWAY_API_URL or RAILWAY_API_KEY env vars');
+    return new Response(
+      JSON.stringify({ error: 'Server misconfiguration' }),
+      { status: 500, headers: { 'Content-Type': 'application/json' } }
+    );
+  }
+
   // Validar Content-Type
   const contentType = request.headers.get('content-type');
   if (!contentType || !contentType.includes('application/json')) {
@@ -41,20 +52,16 @@ export const POST: APIRoute = async ({ request }) => {
     );
   }
 
-  // Fazer request para Railway
+  // Fazer request para Railway com autenticação por API key
   try {
-    const railwayResponse = await fetch(
-      'https://clara-core-production.up.railway.app/api/waitlist',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Origin': 'https://souaclara.com',
-          'Referer': 'https://souaclara.com/',
-        },
-        body: JSON.stringify({ email }),
-      }
-    );
+    const railwayResponse = await fetch(railwayUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-API-Key': railwayKey,
+      },
+      body: JSON.stringify({ email }),
+    });
 
     const responseData = await railwayResponse.json().catch(() => ({}));
 
