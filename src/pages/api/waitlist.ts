@@ -60,7 +60,7 @@ export const POST: APIRoute = async ({ request }) => {
         'Content-Type': 'application/json',
         'X-API-Key': railwayKey,
       },
-      body: JSON.stringify({ email }),
+      body: JSON.stringify({ email, name: body.name || 'Visitante LP' }),
     });
 
     const responseData = await railwayResponse.json().catch(() => ({}));
